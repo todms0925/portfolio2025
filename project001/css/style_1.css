@@ -1,0 +1,1288 @@
+/* 언어설정 */
+@charset 'utf-8';
+
+/* 폰트 */
+@import url('https://cdn.jsdelivr.net/gh/fonts-archive/Paperlogy/Paperlogy.css');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+/* 전체설정 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: bottom;
+}
+
+body {
+    background-color: #050527;
+    font-family: "Noto Sans KR", sans-serif;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+/* 섹션명 */
+h2 {
+    font-family: 'Paperlogy';
+    font-weight: 700;
+    font-size: 30px;
+}
+
+h2 img {
+    width: 28px;
+    height: auto;
+    margin-left: 12px;
+    margin-bottom: 2px;
+}
+
+
+/* 헤더설정 */
+
+.boxA {
+    background-color: #050527;
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+
+/* 외부SNS */
+
+.boxA-1 ul {
+    display: flex;
+    justify-content: right;
+}
+
+.sns-top ul li p {
+    text-indent: -9999px;
+}
+
+.boxA-1 ul li a img {
+    width: 18px;
+    height: auto;
+    margin-right: 10px;
+}
+
+
+/* logo 설정 */
+
+.boxA-2 .logo a img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* util 설정 */
+
+.util ul {
+    display: flex;
+}
+
+.util ul li:nth-child(1) a {
+    color: #fee440;
+    border: solid 1px #fee440;
+    padding: 6px 30px;
+    border-radius: 50px;
+    margin-right: 30px;
+    font-size: 14px;
+    font-family: 'Paperlogy';
+    font-weight: 500;
+}
+
+.util ul li:nth-child(1) a:hover {
+    color: #333;
+    background-color: #fee440;
+    border: solid 1px #fee440;
+}
+
+.util img {
+    width: 25px;
+    height: auto;
+}
+
+/* 메뉴 설정 */
+.menu {
+    display: flex;
+    background-color: #26265B;
+    text-align: center;
+    justify-content: space-evenly;
+    font-family: 'Paperlogy';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li {
+    padding: 15px 70px;
+}
+
+.menu a {
+    color: #fff;
+}
+
+.menu li a:hover {
+    color: #fee440;
+}
+
+
+
+/* 슬라이더 */
+body {
+    overflow-x: hidden;
+}
+
+.box1 {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 200px)
+}
+
+.box1-1 ul {
+    position: relative;
+}
+
+.box1-1 ul li {
+    background-color: #ddd;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin: 30px 0;
+    width:360px;
+    height: 215px;
+}
+
+.box1-1 ul li:nth-child(1) {
+    background-image: url(../img/img_7.jpg);
+    background-size: cover;
+}
+
+.box1-1 ul li:nth-child(2) {
+    background-image: url(../img/img_6.jpg);
+    background-size: cover;
+}
+
+.box1-1 ul li p {
+    display: block;
+    font-family: 'Paperlogy';
+    font-weight: 600;
+    font-size: 20px;
+    position: absolute;
+    left: 30px;
+    color: #fff;
+}
+
+.box1-1 ul li:nth-child(1) p {
+    bottom: 270px;
+}
+
+
+/* 박스1-inner */
+.box1-inner {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    z-index: 2;
+}
+
+.box1-1 ul li:nth-child(2) p {
+    bottom: 25px;
+}
+
+.box1-1 {
+    width: 30%;
+    margin-left: 40px;
+}
+
+.box1-2 {
+    position: absolute;
+    width: 50%;
+    right: 0;
+}
+
+.more_w1,
+.more_w2 {
+    position: absolute;
+    right: 20px;
+}
+
+.more_w1 p,
+.more_w2 p {
+    text-indent: -9999px;
+}
+
+.more_w1 {
+    top: 15px;
+}
+
+.more_w2 {
+    top: 260px;
+}
+
+.slider {}
+
+.slider h1 {
+    font-family: "Orbitron", sans-serif;
+    font-size: 48px;
+    margin-left: 150px;
+    margin-top: 70px;
+}
+
+.slider p {
+    font-family: "Paperlogy";
+    margin-left: 150px;
+    margin-top: 20px;
+    text-align: right;
+
+}
+
+.slider_txt {
+    position: absolute;
+    bottom: 1px;
+}
+
+.slider_img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    background-image: url(../img/img_1.png);
+    text-indent: -9999px;
+}
+
+.slider_img ul {
+    width: 300%;
+    height: 100%;
+    display: flex;
+}
+
+.slider_img li {
+    width: 100%;
+    height: 100%;
+}
+
+
+.EX_btn {
+    background-color: #fee440;
+    padding: 8px 40px;
+    border-radius: 50px;
+    margin-top: 50px;
+    position: absolute;
+    margin-left: 150px;
+    font-family: 'Paperlogy';
+    font-weight: 600;
+    font-size: 15px;
+    color: #333;
+
+}
+
+.slider_btn {
+    width: 100%;
+    display: flex;
+    position: relative;
+    left: 300%;
+    bottom: 200%;
+
+}
+
+.slider_btn p {
+    text-indent: -9999px;
+}
+
+.slider_btnR {
+    margin-right: 15px;
+}
+
+.slider_btnL {
+    margin-right: 40px;
+    transform: scaleX(-1);
+}
+
+.slider_btnS {}
+
+
+
+.s_btn {
+    position: absolute;
+    width: 150px;
+    height: 50px;
+    left: 50%;
+    margin-left: -75px;
+    bottom: 0;
+    z-index: 3;
+    margin-bottom: 25px;
+}
+
+.s_btn ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.s_btn li {
+    width: 11px;
+    height: 11px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 50%;
+    margin: 10px;
+    text-indent: -9999px;
+
+}
+
+.s_btn li:nth-child(1) {
+    background-color: #fee440;
+}
+
+.slider_1 b {
+    color: #FF4C4C;
+    font-weight: bold;
+}
+
+.blur {
+    background-color: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(4px);
+    width: 600px;
+    height: 100%;
+}
+
+
+/* 공지사항 */
+
+.notice {
+    padding: 20px 0;
+    font-size: 18px;
+    border-bottom: solid 1px #fff;
+    border-top: solid 1px #fff;
+}
+
+.box2-inner {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.notice p {
+    font-family: 'Paperlogy';
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.fa-bullhorn {
+    font-size: 18px;
+    color: #FF4C4C;
+    margin-right: 40px;
+}
+
+.fa-angle-right {
+    font-size: 24px;
+}
+
+.notice ul li a,
+i {
+    color: #fff;
+}
+
+/* 예매하기 */
+.box3 h2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.reservation {
+    display: flex;
+    width: 100%;
+}
+
+.reservation1 {
+    background-color: #26265B;
+    width: 300px;
+    height: 330px;
+    border-radius: 14px;
+}
+
+.res1-1 {
+    padding: 25px 30px;
+    font-size: 20px;
+    position: relative;
+}
+
+.res1-2 {
+    display: flex;
+}
+
+.res1-2 b {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.res1-2 b:nth-child(2) {
+    margin-left: auto;
+}
+
+.res1-3 {
+    margin-top: 165px;
+    display: flex;
+}
+
+.res1-3 b {
+    font-size: 28px;
+}
+
+.res1-3 p {
+    margin-left: auto;
+    background-color: #fee440;
+    font-family: 'Paperlogy';
+    font-weight: 700;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+.res1-3 p a i {
+    color: #333;
+    margin-left: 5px;
+}
+
+.res_slider ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.res_slider ul li {
+    background-color: #54546E;
+    width: 9px;
+    height: 9px;
+    border-radius: 50px;
+    margin: 0 5px;
+}
+
+.res_slider ul i {
+    color: #54546E;
+    margin: 0 8px;
+    font-size: 22px;
+}
+
+.reservation2 {
+    height: 330px;
+}
+
+
+.date {
+    color: #fee440;
+    display: flex;
+    border: solid 1px #fee440;
+    border-radius: 50px;
+    width: 20%;
+    font-size: 14px;
+    margin-right: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.date p {
+    margin-bottom: 1px;
+}
+
+.date i {
+    color: #fee440;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+.calender form {
+    display: flex;
+}
+
+.calender select {
+    appearance: none;
+    cursor: pointer;
+    background-color: #fee440;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    border-radius: 50px;
+    color: #333;
+    width: 90%;
+    height: 35px;
+    border: solid 0px;
+    background-image: url(../img/ico/select_icon.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% - 18px);
+}
+
+.calender select:focus {
+    outline: none;
+}
+
+
+.calender ul li {
+    display: flex;
+    font-family: 'Paperlogy';
+    font-weight: 400;
+    background-color: #26265B;
+    padding: 17px 0;
+    margin: 16px 0;
+    font-size: 18px;
+    border-radius: 8px;
+    justify-content: space-between;
+}
+
+.calender ul li i {
+    margin-right: 8px;
+}
+
+.calender ul li p {
+    margin-left: 25px;
+}
+
+.res-group {
+    display: flex;
+    align-items: center;
+}
+
+.res-group p:nth-child(1) {
+    margin-right: 20px;
+}
+
+.res_btn a {
+    background-color: #fee440;
+    font-family: 'Paperlogy';
+    font-weight: 700;
+    padding: 17px;
+    padding-left: 25px;
+    border-radius: 0 8px 8px 0;
+    font-size: 20px;
+}
+
+.res_btn i {
+    margin-left: 5px;
+    color: #333;
+}
+
+
+
+
+/* 관람안내 */
+.box4 {
+    display: flex;
+}
+
+.info {
+    width: 80%;
+    max-width: 600px;
+    margin-left: auto;
+}
+
+.info h2 {
+    margin-top: 60px;
+    margin-bottom: 23px;
+}
+
+.info ul li {
+    display: flex;
+    margin-bottom: 18px;
+}
+
+.info_h {
+    background-color: #fee440;
+    padding: 20px 20px;
+    border-radius: 5px;
+}
+
+.info_h p {
+    font-family: 'Paperlogy';
+    font-weight: 700;
+    font-size: 21px;
+    color: #333;
+    width: 75px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.info_in {
+    border: solid 1px #bbb;
+    border-radius: 5px;
+    padding: 14px;
+    padding-left: 20px;
+    width: 380px;
+    height: 59px;
+    margin-left: 15px;
+}
+
+.info_in_txt {
+    font-size: 17px;
+    margin-top: 4px;
+    margin-left: 16px;
+}
+
+.info_in_txt span {
+    color: #999;
+    font-size: 14px;
+}
+
+/* 오시는 길 */
+
+
+.map {
+    width: 80%;
+    max-width: 600px;
+    margin-right: auto;
+}
+
+.map h2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.google_map {
+    width: 100%;
+    height: 100%;
+}
+
+.google_map iframe {
+    width: 600px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.map-txt {
+    display: flex;
+    margin-top: 5px;
+}
+
+.map .car {
+    margin-top: 8px;
+    margin-left: auto;
+}
+
+.map .car a {
+    background-color: #fee440;
+    font-family: 'Paperlogy';
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.map .car i {
+    color: #333;
+}
+
+.map-txt i {
+    margin-right: 5px;
+    color: #fee440;
+}
+
+/* 인사말 */
+
+.txt-1 {
+    padding: 20px;
+    display: flex;
+}
+
+.txt-1 .txt {
+    padding-left: 50px;
+    padding-top: 50px;
+}
+
+.box5 img {
+    width: 150px;
+    height: auto;
+}
+
+.txt-1 .txt p:nth-child(1) {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.txt-1 .txt p:nth-child(2) {
+    font-family: 'Paperlogy';
+    padding-bottom: 10px;
+}
+
+.txt-1 .txt p:nth-child(3) {}
+
+.txt-1 span {
+    color: #fee440;
+    font-weight: 700;
+}
+
+
+.txt-2 {
+    padding: 20px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.txt-2 .txt {
+    text-align: right;
+    padding-right: 50px;
+
+    padding-top: 50px;
+}
+
+.txt-2 .txt p:nth-child(1) {
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+
+.txt-2 .txt p:nth-child(2) {
+    font-family: 'Paperlogy';
+    padding-bottom: 10px;
+}
+
+.txt-2 span {
+    color: #fee440;
+    font-weight: 700;
+}
+
+.box5 p>img {
+    width: 22px;
+    height: auto;
+    margin: 3px 5px;
+}
+
+.box5 {
+    position: relative;
+}
+
+.box5 .line {
+    position: absolute;
+    width: 63%;
+    height: 1px;
+    background-color: #ccc;
+    top: 53%;
+    left: 220px;
+}
+
+
+/* EXHIBITION 전시 */
+
+.exh-inner1 {
+    display: flex;
+}
+
+.exh_h {
+    background-color: #26265B;
+    padding: 12px;
+    width: 100%;
+}
+
+.exh h2 {
+    margin-top: 14px;
+    margin-bottom: 14px;
+}
+
+.exh_h .list_title {
+    margin-left: auto;
+}
+
+.exh .list_title ul {
+    display: flex;
+    font-family: 'Paperlogy';
+}
+
+.exh .list_title ul li {
+    margin-top: 24px;
+}
+
+.exh .list_title ul li a {
+    padding: 7px 30px;
+    border-radius: 40px;
+    margin: 10px;
+    color: #fff;
+}
+
+
+.list_title ul li:nth-child(1) a:hover {
+    background-color: #fee440;
+    color: #333;
+}
+
+.list_title ul li:nth-child(2) a:hover {
+    background-color: #FF4C4C;
+    color: #333;
+}
+
+.list_title ul li:nth-child(3) a:hover {
+    background-color: #1DDDFF;
+    color: #333;
+}
+
+.exh_1 {
+    background-color: #fee440;
+}
+
+.exh_1 img {
+    width: 100%;
+    height: auto;
+}
+
+.exh-inner2 {
+    display: flex;
+}
+
+.exh .more {
+    background-color: #fee440;
+    padding: 20px;
+    width: 100%;
+}
+
+.exh .more span {
+    font-family: "Orbitron", sans-serif;
+    font-weight: bold;
+    font-size: 26px;
+    color: #333;
+}
+
+
+.exh .more a {
+    font-size: 15px;
+    border: solid 1px #333;
+    padding: 5px 30px;
+    border-radius: 40px;
+    margin-left: auto;
+}
+
+.exh .more a:hover {
+    background-color: #333;
+    color: #fee440;
+}
+
+
+
+
+/* 관람후기 */
+
+.review {
+    width: 100%;
+    height: 500px;
+    /* overflow: hidden; */
+    /* position: relative; */
+}
+
+.review h2 {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.review_silder ul li p:nth-last-child(1) {
+    font-weight: bold;
+}
+
+.review_silder ul li p:nth-of-type(1) {
+    height: 50px;
+}
+
+.review_silder .imgBox {
+    width: 250px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+
+.review_silder {
+    /* position: relative; */
+    overflow: hidden;
+    width: 200%;
+    height: 345px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.review_silder ul {
+    display: flex;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /* position: absolute; */
+}
+
+
+.review_silder1 {
+    left: 0;
+    top: 0;
+    animation: ani1 20s linear infinite;
+}
+
+.review_silder2 {
+    left: 100%;
+    animation: ani2 20s linear infinite;
+
+}
+
+
+.review_silder ul li {
+    background-color: #26265B;
+    margin-right: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    /* box-sizing: border-box; */
+    /* overflow: hidden; */
+    /* position: relative; */
+    width: 250px;
+    height: 340px;
+}
+
+
+.review_silder p {
+    padding: 10px;
+    margin: 0 10px;
+}
+
+.review_soild {
+    border-bottom: solid 1px #ccc;
+    margin: 0 18px;
+}
+
+.review ul:hover li {
+    animation-play-state: paused;
+}
+
+/* @keyframes ani1 {
+    0% {
+        left: 0%;
+    }
+
+    100% {
+        left: -100%;
+    }
+}
+
+@keyframes ani2 {
+    0% {
+        left: 100%;
+    }
+
+    100% {
+        left: 0%;
+    } */
+
+.review_bar {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 40px;
+}
+
+.review_bar1 {
+    width: 1250px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #54546E;
+    margin: 0 auto;
+}
+
+.review_bar2 {
+    width: 300px;
+    height: 10px;
+    border-radius: 50px;
+    background-color: #fee440;
+}
+
+
+
+/* FAQ */
+.FAQ h2 {
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.FAQ ul {
+    background-color: #26265B;
+    width: 100%;
+    padding: 14px 25px;
+    border-radius: 10px;
+}
+
+.FAQ ul {}
+
+.FAQ ul li {
+    padding: 18px 0;
+    border-bottom: solid 1px #ccc;
+    font-size: 18px;
+    margin: 0 18px;
+    display: flex;
+}
+
+
+.FAQ ul li:nth-last-child(1) {
+    border-bottom: none;
+}
+
+.FAQ ul b {
+    font-family: 'Paperlogy';
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.FAQ ul li a {
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+/* 푸터 */
+
+.copyright {
+    background-image: url(../img/img_F.png);
+    background-size: cover;
+    padding: 200px 360px;
+}
+
+.cp_p {
+    margin-top: 70px;
+}
+
+.copyright p {
+    font-size: 14px;
+}
+
+.copyright i {
+    margin-right: 5px;
+}
+
+.SNS {}
+
+.SNS ul {
+    display: flex;
+}
+
+.cp_box {
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    margin: 30px 0;
+    justify-content: space-between;
+}
+
+.SNS img {
+    width: 18px;
+    height: auto;
+    margin-right: 8px;
+}
+
+.SNS p {
+    text-indent: -9999px;
+}
+
+.cp_C {
+    text-align: right;
+    font-weight: bold;
+}
+
+.boxD {
+    margin-top: 400px;
+}
+
+
+
+/* TOP버튼 */
+
+.topBtn {
+    z-index: 9;
+    background-color: #FF4C4C;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    text-align: center;
+    position: fixed;
+    right: 60px;
+    bottom: 40px;
+}
+
+.topBtn p {
+    font-family: 'Paperlogy';
+    font-weight: 600;
+    color: #fff;
+    font-size: 16px;
+}
+
+.topBtn i {
+    font-size: 20px;
+    margin-top: 16px;
+}
+
+
+
+/* 전체사이즈설정 */
+.box1-inner,
+.box2-inner,
+.box3,
+.box5,
+.exh-inner1,
+.exh-inner2,
+.box9 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+/* 섹션 상하 여백 설정 */
+
+.box2,
+.box3,
+.box4,
+.box5,
+.box6,
+.box7,
+.box8,
+.box9 {
+    margin-top: 85px;
+}
+
+
+/* 미디어쿼리 ###########################################################*/
+
+#wrap {
+    margin: 0 auto;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+
+.boxA {
+    display: flex;
+}
+
+.boxA-1 {
+    width: 20%;
+}
+
+.boxA-2 {
+    width: 60%;
+}
+
+.boxA-3 {
+    width: 20%;
+}
+
+.boxA-4 {
+    width: 10%;
+}
+
+.box1 {
+    order: 1;
+    width: 100%;
+}
+
+.box2 {
+    order: 2;
+    width: 100%;
+}
+
+.box3 {
+    order: 3;
+    width: 100%;
+}
+
+.box3 .box3-1 {
+    width: 30%;
+}
+
+.box3 .box3-2 {
+    width: 70%;
+}
+
+.box4 {
+    order: 4;
+    width: 50%;
+}
+
+.box5 {
+    order: 6;
+    width: 100%;
+}
+
+.box6 {
+    order: 7;
+    width: 100%;
+}
+
+.box7 {
+    order: 5;
+    width: 50%;
+}
+
+.box8 {
+    order: 8;
+    width: 100%;
+}
+
+.box9 {
+    order: 9;
+    width: 100%;
+}
+
+
+/* 모바일구간 */
+@media(max-width:599px) {
+
+    .box1 {
+        order: 1;
+        width: 100%;
+    }
+
+    .box2 {
+        order: 2;
+        width: 100%;
+    }
+
+    .box3 {
+        order: 3;
+        width: 100%;
+    }
+
+    .box4 {
+        order: 4;
+        width: 100%;
+    }
+
+    .box5 {
+        order: 5;
+        width: 100%;
+    }
+
+    .box6 {
+        order: 6;
+        width: 100%;
+    }
+
+    .box7 {
+        order: 7;
+        width: 100%;
+    }
+
+    .box8 {
+        order: 8;
+        width: 100%;
+    }
+
+    .box9 {
+        order: 9;
+        width: 100%;
+    }
+
+}
