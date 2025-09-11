@@ -9,16 +9,20 @@
 
     <!-- 그리드가이드 -->
     <!-- <link rel="stylesheet" href="css/grid-guide.css"> -->
+    <!-- 제이쿼리 연결 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="javascript/js.js"></script>
     <!-- 외부스타일시트 -->
     <link rel="stylesheet" href="css/style_1.css">
     <!-- 폰트어썸 CDM-->
-    <script src="https://kit.fontawesome.com/cde05e9f8b.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/5b60675eee.js" crossorigin="anonymous"></script>
 
 </head>
 
 <body>
 
-    <header class="boxA"  id="top">
+    <header class="boxA" id="top">
         <div class="boxA-1">
             <div class="sns-top">
                 <ul>
@@ -61,13 +65,39 @@
     </header>
 
     <div class="boxC">
-        <nav class="menu">
-            <ul>
-                <li><a href="">뮤지엄소개</a></li>
-                <li><a href="">예매안내</a></li>
-                <li><a href="">전시</a></li>
-                <li><a href="">커뮤니티</a></li>
-                <li><a href="">NEWS</a></li>
+        <nav>
+            <ul class="menu">
+                <li><a href="">뮤지엄소개</a>
+                    <ul class="sub">
+                        <li><a href="">인사말</a></li>
+                        <li><a href="">오시는길</a></li>
+                    </ul>
+                </li>
+                <li><a href="">예매안내</a>
+                    <ul class="sub">
+                        <li><a href="">관람안내</a></li>
+                        <li><a href="">예매하기</a></li>
+                    </ul>
+                </li>
+                <li><a href="">전시</a>
+                    <ul class="sub">
+                        <li><a href="">상설전시</a></li>
+                        <li><a href="">현재전시</a></li>
+                        <li><a href="">지난전시</a></li>
+                    </ul>
+                </li>
+                <li><a href="">커뮤니티</a>
+                    <ul class="sub">
+                        <li><a href="">관람후기</a></li>
+                        <li><a href="">이벤트</a></li>
+                        <li><a href="">FAQ/Q&A</a></li>
+                    </ul>
+                </li>
+                <li><a href="">NEWS</a>
+                    <ul class="sub">
+                        <li><a href="">공지사항</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </div>
@@ -89,31 +119,57 @@
                             </div>
                             <p>개관 10주년을 함께<br>축하해주세요!</p>
 
-    
+
                         </li>
                         <li>
-                            <div class="more_w2"><a href=""> <img src="img/ico/more_w.png" alt="" width="40px"
+                            <div class="more_w2"><a href="https://smartstore.naver.com/figuremuseumw"> <img src="img/ico/more_w.png" alt="" width="40px"
                                         height="auto">
                                     <p>버튼</p>
                                 </a></div>
                             <p>피규어뮤지엄W<br>온라인스토어OPEN</p>
-                            
+
                         </li>
                     </ul>
                 </div>
 
                 <div class="box1-2">
-                    <div class="slider">
-                        <div class="slider_txt">
-                            <div class="slider_1">
-                                <h1>Editorial<br> <b>DC</b> FanDome<br>Press Release</h1>
-                                <p>2025-01-21 ~</p>
-                                <a href="">
-                                    <div class="EX_btn">현재전시 더보기</div>
-                                </a>
+                    <ul class="slider">
+                        <li class="slider_1 on">
+                            <div class="slider_txt">
+                                <div>
+                                    <h1>Editorial<br> <b>DC</b> FanDome<br>Press Release</h1>
+                                    <p>2025-01-21 ~</p>
+                                    <a href="">
+                                        <div class="EX_btn">현재전시 더보기</div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        </li>
+
+                        <li class="slider_2">
+                            <div class="slider_txt">
+                                <div>
+                                    <h1>2025<br> <b>Marvel</b> Avengers<br>Station</h1>
+                                    <p>2025-01-21 ~</p>
+                                    <a href="">
+                                        <div class="EX_btn">현재전시 더보기</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="slider_3">
+                            <div class="slider_txt">
+                                <div>
+                                    <h1>2025<br>SHOW ME THE<br>MEMEWE<b>展</b></h1>
+                                    <p>2025-12-08 ~</p>
+                                    <a href="">
+                                        <div class="EX_btn">현재전시 더보기</div>
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
 
                 </div>
 
@@ -121,36 +177,37 @@
 
 
             <div class="slider_img">
-                
+
                 <div class="blur"></div>
                 <ul>
-                    <li>img1</li>
-                    <li>img2</li>
-                    <li>img3</li>
+                    <li><img src="img/img_1.png" alt=""></li>
+                    <li><img src="img/img_2.png" alt=""></li>
+                    <li><img src="img/img_3.png" alt=""></li>
                 </ul>
             </div>
 
             <div class="s_btn">
 
                 <ul>
-                    <li>1</li>
+                    <li class="on">1</li>
                     <li>2</li>
                     <li>3</li>
                 </ul>
 
                 <div class="slider_btn">
-                    <div class="slider_btnR"><a href="">
-                            <img src="img/ico/slider_sikp.png" alt="" width="40px" height="auto">
-                            <p>오른쪽</p>
-                        </a></div>
                     <div class="slider_btnL"><a href="">
                             <img src="img/ico/slider_sikp.png" alt="" width="40px" height="auto">
                             <p>왼쪽</p>
                         </a></div>
-                    <div class="slider_btnS"><a href="">
-                            <img src="img/ico/slider_stop_1.png" alt="" width="30px" height="auto">
-                            <p>정지</p>
+                    <div class="slider_btnR"><a href="">
+                            <img src="img/ico/slider_sikp.png" alt="" width="40px" height="auto">
+                            <p>오른쪽</p>
                         </a></div>
+                    <div class="slider_btnS">
+                        <a href="" class="on"> <img src="img/ico/slider_stop_2.png" alt="" width="30px" height="auto"></a>
+                        <a href="" ><img src="img/ico/slider_stop_1.png" alt="" width="30px" height="auto"></a>
+                        
+                    </div>
                 </div>
 
         </section>
@@ -395,7 +452,7 @@
                 </div>
 
                 <div class="imgBox">
-              
+
                     <div class="exh_1">
                         <img src="img/exh_1-1.png" alt="">
                     </div>
@@ -650,7 +707,7 @@
             </div>
 
             <div class="cp_C">
-                <p>Copyright ⓒ 2025.LSE0925.All Rights Reserved.</p>
+                <p>Copyright ⓒ 2025.ISAEEUN.All Rights Reserved.</p>
 
             </div>
         </div>
