@@ -34,7 +34,7 @@
 
 ### 🚀 링크
 - [브레인스토밍](링크)
-- [와이어프레임 & 디자인]([링크](https://www.figma.com/proto/d0gp4SL5PQXM9iS7emewC4/%ED%94%BC%EA%B7%9C%EC%96%B4%EB%AE%A4%EC%A7%80%EC%97%84w_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81?node-id=736-388&p=f&t=mWf36h988qcm0tMf-1&scaling=scale-down&content-scaling=fixed&page-id=736%3A2))
+- [와이어프레임 & 디자인]([링크](https://www.figma.com/proto/d0gp4SL5PQXM9iS7emewC4/%ED%94%BC%EA%B7%9C%EC%96%B4%EB%AE%A4%EC%A7%80%EC%97%84w_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81?node-id=736-388&p=f&t=mWf36h988qcm0tMf-1&scaling=scale-down&content-scaling=fixed&page-id=736%3A2)
 - [최종 사이트](project001)
 
 ### 👀 페이지 미리보기
