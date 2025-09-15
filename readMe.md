@@ -20,7 +20,7 @@
 
 # 💼 Projects
 
-## 1️⃣ Project 01 : website renewel
+## 1️⃣ Project 01 : website renewel:피규어뮤지엄W
 > 웹사이트 피규어뮤지엄W의 리뉴얼
 
 **📆 제작 기간** : 2024.01.01 ~ 2024.01.28  
@@ -44,7 +44,7 @@
 
 ---
 
-## 2️⃣ Project 02 : New Web Page Creation
+## 2️⃣ Project 02 : New Web Page Creation:상하목장
 > 상하목장의 쇼핑몰 웹페이지 신규 제작
 
 **📆 제작 기간** : 2024.02.01 ~ 2024.02.20  
