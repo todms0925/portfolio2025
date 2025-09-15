@@ -40,10 +40,9 @@
 
 ### 👀 페이지 미리보기
 | 메인 페이지 | |
-|------------|----------------|
-| ![메인](<img width="3000" height="1575" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/ac74812f-ef68-4945-b7db-a3dd966e153b" />
-) 
-
+| 메인 | 서브 | |
+|-----|------|--|
+| ![메인](이미지주소) | ![서브](이미지주소) |
 ---
 
 ## 2️⃣ Project 02 : New Web Page Creation:상하목장
