@@ -39,9 +39,9 @@
 - [최종 사이트](https://todms0925.github.io/portfolio2025/project001/)
 
 ### 👀 페이지 미리보기
-| 메인 페이지 | 로그인 페이지 |
+| 메인 페이지 | 상세 페이지 |
 |------------|----------------|
-| ![메인] <img width="3000" height="3000" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/2ce4935c-c2b2-4834-aa95-2b6563b0b44b" /> |
+| <img width="3000" height="3000" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/2ce4935c-c2b2-4834-aa95-2b6563b0b44b" /> |
 
 ---
 
@@ -64,7 +64,7 @@
 ### 👀 페이지 미리보기
 | 메인 페이지 | 로그인 페이지 |
 |------------|----------------|
-| ![메인] <img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/966dd0e5-3f07-4d01-9312-71d8afaa5a8a" /> | ![상품] <img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/674efaa5-2dc3-45a9-8a3a-4b3c35da4729" /> |
+| <img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/966dd0e5-3f07-4d01-9312-71d8afaa5a8a" /> | <img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/674efaa5-2dc3-45a9-8a3a-4b3c35da4729" /> |
 
 ---
 
