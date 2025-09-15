@@ -33,8 +33,9 @@
 - 메인페이지 제작  
 
 ### 🚀 링크
-- [브레인스토밍](링크)
+- [인포메이션아키텍쳐](https://www.figma.com/proto/d0gp4SL5PQXM9iS7emewC4/%ED%94%BC%EA%B7%9C%EC%96%B4%EB%AE%A4%EC%A7%80%EC%97%84w_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81?node-id=21-7&t=BbqYUQjpuaMIOz0C-1&scaling=min-zoom&content-scaling=fixed&page-id=1%3A2)
 - [와이어프레임 & 디자인](https://www.figma.com/proto/d0gp4SL5PQXM9iS7emewC4/%ED%94%BC%EA%B7%9C%EC%96%B4%EB%AE%A4%EC%A7%80%EC%97%84w_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B81?node-id=736-388&p=f&t=mWf36h988qcm0tMf-1&scaling=scale-down&content-scaling=fixed&page-id=736%3A2)
+- [코드 저장소](링크)
 - [최종 사이트](project001)
 
 ### 👀 페이지 미리보기
@@ -57,7 +58,7 @@
 
 ### 🚀 링크
 - [디자인 시안](https://www.figma.com/proto/Bka41X3pN26Kt37TSALdEl/%EC%83%81%ED%95%98%EB%AA%A9%EC%9E%A5_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B82?node-id=124-1005&p=f&t=j2j8sDxPjj3xAW0V-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A3)
-- [코드 저장소](링크)
+- [코드 저장소](https://github.com/todms0925/portfolio2025/blob/main/project002/index.html)
 - [배포 사이트](https://todms0925.github.io/portfolio2025/project002/)
 
 ### 👀 페이지 미리보기
@@ -67,27 +68,7 @@
 
 ---
 
-## 3️⃣ Project 03 : 프로젝트 제목
-> 한 줄 소개 (예: 반응형 포트폴리오 웹사이트 제작)
 
-**📆 제작 기간** : 2024.03.01 ~ 2024.03.15  
-**🧑 역할** : 퍼블리싱, 디자인, 기획 전담
-
-### ⭐ 프로젝트 설명
-본인 포트폴리오 웹사이트로, 나만의 디자인 스타일을 표현했습니다.  
-
-- **One Page Scroll** 구조
-- **GSAP 애니메이션**으로 인터랙션 구현
-- **다크모드 토글** 기능 추가
-
-### 🚀 링크
-- [디자인 시안](링크)
-- [GitHub Pages](링크)
-
-### 👀 페이지 미리보기
-| 메인 섹션 | 상세 섹션 |
-|----------|-----------|
-| ![메인](이미지주소) | ![상세](이미지주소) |
 
 ---
 
