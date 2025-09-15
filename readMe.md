@@ -1,4 +1,4 @@
-# 2025portfolio
+<img width="3000" height="1575" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/87e573f4-bb47-45d9-9ce3-cdbdf4c22be0" /># 2025portfolio
 
 # 👋 About Me
 안녕하세요, 웹디자인과 퍼블리싱을 공부하고 있는 **이새은**입니다.
@@ -39,9 +39,10 @@
 - [최종 사이트](https://todms0925.github.io/portfolio2025/project001/)
 
 ### 👀 페이지 미리보기
-| 메인 | 서브 | |
+| 메인 |
 |-----|------|--|
-| ![메인](이미지주소) | ![서브](이미지주소) |
+| ![메인]!(<img width="3000" height="1575" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/d476828b-a3e2-4cc8-8575-3e60e8d7ea35" />
+)
 
 ---
 
@@ -62,9 +63,9 @@
 - [배포 사이트](https://todms0925.github.io/portfolio2025/project002/)
 
 ### 👀 페이지 미리보기
-| 메인 페이지 | 상품 상세 페이지 |
+| 메인 페이지 | 로그인 페이지 |
 |------------|----------------|
-| ![메인](이미지주소) | ![상품](이미지주소) |
+| ![메인](<img width="3000" height="3000" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/97019646-7f6e-4993-a056-3d03cb9079dc" />) | ![상품](<img width="3000" height="3000" alt="944893_OD15EW1-1" src="https://github.com/user-attachments/assets/6e46e203-ff88-49b5-aa0d-9691a68a9b0d" />) |
 
 ---
 
