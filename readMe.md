@@ -39,10 +39,10 @@
 - [최종 사이트](https://todms0925.github.io/portfolio2025/project001/)
 
 ### 👀 페이지 미리보기
-| 메인 페이지 | 
-| 메인 | 서브 | 
-|-----|------|--|
-| ![메인](<img width="3000" height="1575" alt="Image" src="https://github.com/user-attachments/assets/8c2798fa-30fb-4b95-8cb7-cd00c04c1d09" />) | ![서브](이미지주소) |
+| 메인 페이지 | 로그인 페이지 |
+|------------|----------------|
+| ![메인](<img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/966dd0e5-3f07-4d01-9312-71d8afaa5a8a" />) | ![상품](<img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/674efaa5-2dc3-45a9-8a3a-4b3c35da4729" />) |
+
 ---
 
 ## 2️⃣ Project 02 : New Web Page Creation:상하목장
