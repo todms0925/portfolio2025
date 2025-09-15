@@ -39,9 +39,10 @@
 - [최종 사이트](https://todms0925.github.io/portfolio2025/project001/)
 
 ### 👀 페이지 미리보기
-| 메인 |
-|-----|------|--|
-| ![메인]!(<img width="3000" height="1575" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/87e573f4-bb47-45d9-9ce3-cdbdf4c22be0" /># 2025portfolio)
+| 메인 페이지 | |
+|------------|----------------|
+| ![메인](<img width="3000" height="1575" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/ac74812f-ef68-4945-b7db-a3dd966e153b" />
+) 
 
 ---
 
