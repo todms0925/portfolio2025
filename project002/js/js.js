@@ -376,6 +376,58 @@ $(document).ready(function () {
     });
   });
 
+
+
+$(function() {
+
+  // -----------------------------
+  // 기본 shop 숨김
+  $('#shop_wrap [id^="shop"]').hide();
+
+  // -----------------------------
+  // 장바구니 버튼 클릭 시 li 이벤트 중첩 방지
+  $(document).on('click', '.cart_s', function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+  });
+
+  // -----------------------------
+  // shop 클릭 매핑 테이블
+  const shopMap = [
+    { selector: '.st_list1 .milk li', startShop: 1 },      // 우유 1~5
+    { selector: '.bast ul li:first', startShop: 6 },       // 베스트 첫번째 li
+    { selector: '.st_list1 .f-milk li', startShop: 7 },    // 발효유 7~11
+    { selector: '.st_list2 .juice li', startShop: 12 },    // 주스 12~16
+    // { selector: '.st_list2 .ice li', startShop: 17 },   // 아이스크림 추가 시
+  ];
+
+  // -----------------------------
+  // 각 매핑에 대해 클릭 이벤트 등록
+  shopMap.forEach(function(map) {
+    $(map.selector).each(function(index) {
+      $(this).on('click', function() {
+        // 모든 shop 숨김
+        $('#shop_wrap [id^="shop"]').hide();
+
+        // 해당 shop 보여주기
+        $('#shop' + (map.startShop + index)).show();
+      });
+    });
+  });
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
   // ------------------------
   // 리뷰 이미지 없는 경우 제거
   // ------------------------
@@ -466,23 +518,6 @@ $(document).ready(function () {
   });
 
 
-
-
-
-
-
-
-
-
-  $(document).ready(function() {
-    // 유기농 딸기 우유 링크를 클릭했을 때
-    $('#on').on('click', function(e) {
-        e.preventDefault(); // 기본 링크 동작(페이지 이동) 방지
-
-        $('#shop1').hide(); // #shop1 숨기기
-        $('#shop2').show(); // #shop2 보여주기
-    });
-});
 
 });
 
