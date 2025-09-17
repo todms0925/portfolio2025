@@ -338,7 +338,7 @@ nav>ul li:hover .sub {
 }
 
 .s_btn li:hover {
-    
+
     transform: scale(1.2);
 }
 
@@ -1302,6 +1302,7 @@ nav>ul li:hover .sub {
 }
 
 
+
 /* 푸터 */
 footer {
     background-image: url(../img/foo_bg.png);
@@ -1893,36 +1894,36 @@ footer b {
 #shop7 .chop_list1:hover .shop_listSub {
     height: 150px;
 }
- 
+
 #shop8 .chop_list1:hover .shop_listSub {
     height: 150px;
 }
- 
+
 #shop9 .chop_list1:hover .shop_listSub {
     height: 150px;
 }
- 
+
 #shop10 .chop_list1:hover .shop_listSub {
     height: 150px;
 }
- 
+
 #shop12 .chop_list1:hover .shop_listSub {
     height: 150px;
 }
- 
+
 #shop13 .chop_list1:hover .shop_listSub {
     height: 150px;
 }
- 
+
 #shop14 .chop_list1:hover .shop_listSub {
     height: 150px;
 }
- 
+
 #shop15 .chop_list1:hover .shop_listSub {
     height: 150px;
 }
- 
- 
+
+
 
 .shop_listSub li:hover {
     font-weight: bold;
@@ -2318,7 +2319,7 @@ footer b {
 /* 각 제품 on/off */
 
 #shop_wrap [id^="shop"] {
-  display: none;
+    display: none;
 }
 
 

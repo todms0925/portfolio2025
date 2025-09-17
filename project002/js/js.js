@@ -274,60 +274,91 @@ $(document).ready(function () {
     }
   });
 
+  // 할인쿠폰 팝업
+  $('.brand a').on('click', function (e) {
+    e.preventDefault();
+
+    const popup = $('.brand-popUP');
+
+    // 초기 위치와 투명도 세팅
+    popup.css({
+      bottom: '0',
+      opacity: 0,
+      display: 'block'
+    });
+
+    // 올라오면서 페이드인
+    popup.stop().animate({
+      bottom: '12%',
+      opacity: 1
+    }, 500, function () {
+      // 1초간 유지
+      setTimeout(function () {
+        // 사라지면서 내려가기
+        popup.animate({
+          opacity: 0
+        }, 500, function () {
+          popup.hide(); // 완전히 사라진 뒤 display: none 처리
+        });
+      }, 1000);
+    });
+  });
+
+
 
   // _____________________________________________________
   // 서브페이지 설정
 
 
   //로그인 페이지
-   $(document).ready(function() {
+  $(document).ready(function () {
 
-    
+
     // 유틸 메뉴의 첫 번째 li 요소(로그인 아이콘)를 클릭했을 때
-    $('.util ul li:first-child').on('click', function(e) {
-        e.preventDefault(); 
-        $('#login').show();
+    $('.util ul li:first-child').on('click', function (e) {
+      e.preventDefault();
+      $('#login').show();
     });
 
     // 사이드 장바구니에서 '구매하기' 버튼을 클릭했을 때
-    $('.cart_side_txt3').on('click', function(e) {
-        e.preventDefault();
-        
-        // 로그인 페이지를 보이게 함
-        $('#login').show();
-        
-        // 장바구니 페이지는 숨김
-        $('.cart_side').removeClass('on');
-        $('.cart_side_btn').removeClass('on');
-        $('.cart_side_bg').removeClass('on');
+    $('.cart_side_txt3').on('click', function (e) {
+      e.preventDefault();
+
+      // 로그인 페이지를 보이게 함
+      $('#login').show();
+
+      // 장바구니 페이지는 숨김
+      $('.cart_side').removeClass('on');
+      $('.cart_side_btn').removeClass('on');
+      $('.cart_side_bg').removeClass('on');
     });
 
     // '.fa-solid.fa-xmark' 또는 '.login_bg'를 클릭했을 때
-    $('.fa-solid.fa-xmark, .login_bg').on('click', function() {
-        $('#login').hide();
+    $('.fa-solid.fa-xmark, .login_bg').on('click', function () {
+      $('#login').hide();
     });
 
     // 페이지 로드 시 localStorage에 아이디가 있는지 확인하고 채워 넣음
     if (localStorage.getItem('savedId')) {
-        $('input[name="userName"]').val(localStorage.getItem('savedId'));
-        $('#remember-check').prop('checked', true);
+      $('input[name="userName"]').val(localStorage.getItem('savedId'));
+      $('#remember-check').prop('checked', true);
     }
 
     // 로그인 폼 제출 시
-    $('#login-form').submit(function() {
-        if ($('#remember-check').is(':checked')) {
-            localStorage.setItem('savedId', $('input[name="userName"]').val());
-        } else {
-            localStorage.removeItem('savedId');
-        }
+    $('#login-form').submit(function () {
+      if ($('#remember-check').is(':checked')) {
+        localStorage.setItem('savedId', $('input[name="userName"]').val());
+      } else {
+        localStorage.removeItem('savedId');
+      }
     });
-});
+  });
 
 
   // ------------------------
   // 슬라이드 처리 (shop1, shop2)
   // ------------------------
-  $('.shop_main').each(function() {
+  $('.shop_main').each(function () {
     let $shop = $(this);
     let $imgs = $shop.find('.shop_img li');
     let $dots = $shop.find('.shop_side li');
@@ -345,7 +376,7 @@ $(document).ready(function () {
       current = next;
     }
 
-    let timer = setInterval(function() {
+    let timer = setInterval(function () {
       let next = (current + 1) % total;
       showSlide(next);
     }, interval);
@@ -354,21 +385,21 @@ $(document).ready(function () {
   // ------------------------
   // 가격, 수량 갱신 (shop 단위)
   // ------------------------
-  $('.shop_main').each(function() {
+  $('.shop_main').each(function () {
     let $shop = $(this);
     let unitPrice = Number($shop.find('.shop_price li').first().find('span').text());
 
-    $shop.find('.shop_price .fa-plus').click(function() {
+    $shop.find('.shop_price .fa-plus').click(function () {
       let $qtySpan = $(this).siblings('span');
       let qty = Number($qtySpan.text()) + 1;
       $qtySpan.text(qty);
       $shop.find('.shop_price li').first().find('span').text(unitPrice * qty);
     });
 
-    $shop.find('.shop_price .fa-minus').click(function() {
+    $shop.find('.shop_price .fa-minus').click(function () {
       let $qtySpan = $(this).siblings('span');
       let qty = Number($qtySpan.text());
-      if(qty > 1) {
+      if (qty > 1) {
         qty--;
         $qtySpan.text(qty);
         $shop.find('.shop_price li').first().find('span').text(unitPrice * qty);
@@ -378,44 +409,44 @@ $(document).ready(function () {
 
 
 
-$(function() {
+  $(function () {
 
-  // -----------------------------
-  // 기본 shop 숨김
-  $('#shop_wrap [id^="shop"]').hide();
+    // -----------------------------
+    // 기본 shop 숨김
+    $('#shop_wrap [id^="shop"]').hide();
 
-  // -----------------------------
-  // 장바구니 버튼 클릭 시 li 이벤트 중첩 방지
-  $(document).on('click', '.cart_s', function(e) {
-    e.preventDefault();
-    e.stopPropagation();
-  });
+    // -----------------------------
+    // 장바구니 버튼 클릭 시 li 이벤트 중첩 방지
+    $(document).on('click', '.cart_s', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    });
 
-  // -----------------------------
-  // shop 클릭 매핑 테이블
-  const shopMap = [
-    { selector: '.st_list1 .milk li', startShop: 1 },      // 우유 1~5
-    { selector: '.bast ul li:first', startShop: 6 },       // 베스트 첫번째 li
-    { selector: '.st_list1 .f-milk li', startShop: 7 },    // 발효유 7~11
-    { selector: '.st_list2 .juice li', startShop: 12 },    // 주스 12~16
-    // { selector: '.st_list2 .ice li', startShop: 17 },   // 아이스크림 추가 시
-  ];
+    // -----------------------------
+    // shop 클릭 매핑 테이블
+    const shopMap = [
+      { selector: '.st_list1 .milk li', startShop: 1 },      // 우유 1~5
+      { selector: '.bast ul li:first', startShop: 6 },       // 베스트 첫번째 li
+      { selector: '.st_list1 .f-milk li', startShop: 7 },    // 발효유 7~11
+      { selector: '.st_list2 .juice li', startShop: 12 },    // 주스 12~16
+      // { selector: '.st_list2 .ice li', startShop: 17 },   // 아이스크림 추가 시
+    ];
 
-  // -----------------------------
-  // 각 매핑에 대해 클릭 이벤트 등록
-  shopMap.forEach(function(map) {
-    $(map.selector).each(function(index) {
-      $(this).on('click', function() {
-        // 모든 shop 숨김
-        $('#shop_wrap [id^="shop"]').hide();
+    // -----------------------------
+    // 각 매핑에 대해 클릭 이벤트 등록
+    shopMap.forEach(function (map) {
+      $(map.selector).each(function (index) {
+        $(this).on('click', function () {
+          // 모든 shop 숨김
+          $('#shop_wrap [id^="shop"]').hide();
 
-        // 해당 shop 보여주기
-        $('#shop' + (map.startShop + index)).show();
+          // 해당 shop 보여주기
+          $('#shop' + (map.startShop + index)).show();
+        });
       });
     });
-  });
 
-});
+  });
 
 
 
@@ -431,10 +462,10 @@ $(function() {
   // ------------------------
   // 리뷰 이미지 없는 경우 제거
   // ------------------------
-  $('.review_list').each(function() {
-    $(this).find('li').each(function() {
+  $('.review_list').each(function () {
+    $(this).find('li').each(function () {
       let img = $(this).find('img');
-      if(!img.attr('src') || img.attr('src').trim() === '') {
+      if (!img.attr('src') || img.attr('src').trim() === '') {
         $(this).addClass('no-image-review');
         img.parent('.review_listImgBox').remove();
       }
@@ -444,7 +475,7 @@ $(function() {
   // ------------------------
   // 리뷰 페이지네이션 (shop 단위)
   // ------------------------
-  $('.review').each(function() {
+  $('.review').each(function () {
     let $review = $(this);
     let $li = $review.find('.review_list li');
     const perPage = 6;
@@ -453,17 +484,17 @@ $(function() {
 
     function showPage(page) {
       $li.hide();
-      $li.slice((page-1)*perPage, page*perPage).show();
+      $li.slice((page - 1) * perPage, page * perPage).show();
       $review.find('.review_bar span').text(page);
     }
 
-    $review.find('.review_bar .fa-angle-left').click(function() {
-      if(currentPage > 1) currentPage--;
+    $review.find('.review_bar .fa-angle-left').click(function () {
+      if (currentPage > 1) currentPage--;
       showPage(currentPage);
     });
 
-    $review.find('.review_bar .fa-angle-right').click(function() {
-      if(currentPage < totalPages) currentPage++;
+    $review.find('.review_bar .fa-angle-right').click(function () {
+      if (currentPage < totalPages) currentPage++;
       showPage(currentPage);
     });
 
@@ -473,7 +504,7 @@ $(function() {
   // ------------------------
   // 추천상품 슬라이드 (shop 단위)
   // ------------------------
-  $('.recommend').each(function() {
+  $('.recommend').each(function () {
     const $shopRec = $(this);
     const $ul = $shopRec.find('.re_list > div > ul');
     const $bar = $shopRec.find('.re_bar');
@@ -492,27 +523,27 @@ $(function() {
     let startX = 0;
     let handleStart = 0;
 
-    $handle.on('mousedown touchstart', function(e) {
+    $handle.on('mousedown touchstart', function (e) {
       e.preventDefault();
       isDragging = true;
       startX = e.pageX || e.originalEvent.touches[0].pageX;
       handleStart = parseFloat($handle.css('left')) || 0;
     });
 
-    $(document).on('mousemove touchmove', function(e) {
-      if(!isDragging) return;
+    $(document).on('mousemove touchmove', function (e) {
+      if (!isDragging) return;
       const x = e.pageX || e.originalEvent.touches[0].pageX;
       let move = x - startX;
       let newLeft = handleStart + move;
-      if(newLeft < 0) newLeft = 0;
-      if(newLeft > handleMax) newLeft = handleMax;
+      if (newLeft < 0) newLeft = 0;
+      if (newLeft > handleMax) newLeft = handleMax;
       $handle.css('left', newLeft + 'px');
       const percent = newLeft / handleMax;
       const ulLeft = -maxMove * percent;
       $ul.css('transform', 'translateX(' + ulLeft + 'px)');
     });
 
-    $(document).on('mouseup touchend', function() {
+    $(document).on('mouseup touchend', function () {
       isDragging = false;
     });
   });
