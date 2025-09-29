@@ -20,7 +20,7 @@
 
 # 💼 Projects
 
-## 1️⃣ Project 01 : website renewel:피규어뮤지엄W
+## 1️⃣ Project 01 - website renewel:피규어뮤지엄W
 > 웹사이트 피규어뮤지엄W의 리뉴얼
 
 **📆 제작 기간** : 2024.01.01 ~ 2024.01.28  
@@ -45,7 +45,7 @@
 
 ---
 
-## 2️⃣ Project 02 : New Web Page Creation:상하목장
+## 2️⃣ Project 02 - New Web Page Creation:상하목장
 > 상하목장의 쇼핑몰 웹페이지 신규 제작
 
 **📆 제작 기간** : 2024.02.01 ~ 2024.02.20  
@@ -58,7 +58,7 @@
 
 ### 🚀 링크
 - [디자인 시안](https://www.figma.com/proto/Bka41X3pN26Kt37TSALdEl/%EC%83%81%ED%95%98%EB%AA%A9%EC%9E%A5_%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B82?node-id=124-1005&p=f&t=j2j8sDxPjj3xAW0V-1&scaling=scale-down&content-scaling=fixed&page-id=1%3A3)
-- [코드 저장소](https://github.com/todms0925/portfolio2025/blob/main/project001/index.html)
+- [코드 저장소](https://github.com/todms0925/portfolio2025/blob/main/project002/index.html)
 - [최종 사이트](https://todms0925.github.io/portfolio2025/project002/)
 
 ### 👀 페이지 미리보기
@@ -67,6 +67,28 @@
 | <img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/966dd0e5-3f07-4d01-9312-71d8afaa5a8a" /> | <img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/674efaa5-2dc3-45a9-8a3a-4b3c35da4729" /> |
 
 ---
+## 2️⃣ Project 03 - Panpage Project:여자친구(GFRIEND)
+> 걸그룹 여자친구(GFRIEND)의 팬페이지 제작
+
+**📆 제작 기간** : 2024.02.01 ~ 2024.02.20  
+**🧑 역할** : 퍼블리싱 100%, 기획 100%
+
+### ⭐ 프로젝트 설명
+겨울의 신비로움을 담아냄과 동시에 청순하며 아련한 이미지를 나타낼 수 있는 방향으로 내세우고 있습니다.
+‘조화로움’은 가장 중요한 키워드로, 특별히 한 가지 색이 눈에 띄는 것이 아닌 모든 무드 컬러가 최대한 어우러지도록 디자인 했습니다. 
+
+- 기존 이미지 컬러: 클라우드 댄서, 스쿠바 블루 / 새로 추가한 컬러: 페일 아벤더, 카메오 핑크, 파우더 블루
+- 메인페이지 제작
+
+### 🚀 링크
+- [디자인 시안](https://www.figma.com/proto/Pk5j9fWouBhcXu0Q119wDx/%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B83_%EC%97%AC%EC%9E%90%EC%B9%9C%EA%B5%AC?node-id=202-2&p=f&t=WjxUmyHoIlF4GSOc-1&scaling=min-zoom&content-scaling=fixed&page-id=1%3A5)
+- [코드 저장소](https://github.com/todms0925/portfolio2025/blob/main/project003/index.html)
+- [최종 사이트](https://todms0925.github.io/portfolio2025/project003/)
+
+### 👀 페이지 미리보기
+| Home 페이지 | 모든 페이지 |
+|------------|----------------|
+| <img width="3000" height="3000" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/4472e59a-b541-4d54-9551-f4708e0e95ed" /> | <img width="3500" height="2333" alt="23126508_195" src="https://github.com/user-attachments/assets/a456eb02-5069-4804-9694-d1033beb90a6" /> |
 
 
 
