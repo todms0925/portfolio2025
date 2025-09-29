@@ -1,0 +1,1239 @@
+/* 언어설정 */
+@charset 'utf-8';
+@import url('https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap');
+
+/* font-family: "Agdasima", sans-serif; */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+/* font-family: "Pretendard Variable"; */
+
+@font-face {
+    font-family: 'BookendBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2410-2@1.0/TTBookendBatangR.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Light.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NexonLv1Gothic';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF Bold.woff') format('woff');
+    font-weight: 700;
+    font-display: swap;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+img {
+    border: none;
+    vertical-align: bottom;
+    image-rendering: auto;
+}
+
+body {
+    letter-spacing: -0.3px;
+    word-spacing: -0.3px;
+    font-family: 'NexonLv1Gothic';
+    font-weight: normal;
+    color: #333;
+    cursor: url('../img/cursor1.png') 16 16, auto;
+}
+
+#wrap section {
+    width: 100%;
+    height: 980px;
+    background-size: cover;
+    background-position: right center;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 네비게이션, 로고, 마우스 설정 */
+.logo {
+    position: fixed;
+    z-index: 9;
+    left: 50%;
+    transform: translate(-50%);
+    top: 40px;
+}
+
+nav {
+    position: fixed;
+    z-index: 8;
+    width: 100%;
+    height: 128px;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0) 100%);
+    color: #fff;
+    font-family: "Agdasima", sans-serif;
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+nav ul {
+    display: flex;
+    padding: 30px;
+    padding-top: 50px;
+    text-align: center;
+    padding-right: 150px;
+}
+
+nav ul li {
+    cursor: url('../img/cursor2.png') 16 16, auto;
+    margin-left: 130px;
+    transition: all 0.3s;
+    width: 100px;
+    height: 30px;
+}
+
+nav ul li:nth-child(2) {
+    margin-right: auto;
+}
+
+nav ul li:hover {
+    color: #00E3FF;
+}
+
+nav ul li.on {
+    color: #00E3FF;
+}
+
+.mouse1 {
+    position: fixed;
+    z-index: 8;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.mouse img {
+    position: absolute;
+    width: 20px;
+    bottom: -18px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.mouse .line {
+    position: absolute;
+    margin-top: 25px;
+    width: 1px;
+    height: 25px;
+    background-color: #fff;
+}
+
+.mouse2 {
+    position: fixed;
+    z-index: 8;
+    bottom: 18px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 99px;
+    border: 1px solid #fff;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    line-height: 3.5;
+    font-family: "Pretendard Variable";
+    letter-spacing: 0.4px;
+    transition: all 0.4s;
+    cursor: url('../img/cursor2.png') 16 16, auto;
+
+}
+
+.mouse2:hover {
+    background-color: rgba(240, 248, 233, 0.3);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.6;
+    }
+}
+
+.mouse1 img:nth-child(1) {
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* 홈 설정 */
+.home {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    background-color: #333;
+}
+
+.home p {
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    bottom: 15%;
+    transform: translate(-50%);
+    opacity: 0;
+    transition: all 2s;
+
+}
+
+.home p:nth-child(1) {
+    font-family: 'BookendBatang';
+    font-size: 34px;
+    margin-bottom: 35px;
+    line-height: 1.3;
+}
+
+section.home p span {
+    display: inline-block;
+}
+
+.home video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(80%)
+}
+
+
+
+/* 앨범 */
+.Discography {
+    background-image: url(../img/bg1.jpg);
+    display: flex;
+}
+
+.Discography .list {
+    position: absolute;
+    top: 0;
+    right: 12%;
+    z-index: 8;
+    margin-top: 190px;
+    margin-left: 200px;
+}
+
+.Discography .list li {
+    cursor: url('../img/cursor2.png') 16 16, auto;
+
+    display: flex;
+    align-items: center;
+    background-color: rgba(240, 248, 233, 0.5);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+    width: 550px;
+    height: 45px;
+    border-radius: 99px;
+    margin-bottom: 18px;
+    position: relative;
+    transition: all 0.4s;
+}
+
+.Discography .list li:hover {
+    transform: scale(1.1);
+}
+
+.Discography .list .ico {
+    margin-left: 10px;
+    background-color: #00ABC0;
+    border-radius: 99px;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 2;
+}
+
+.Discography .list .ico i {
+    margin-right: 3px;
+}
+
+.Discography .list p {
+    font-family: 'BookendBatang';
+    font-size: 15px;
+    margin-left: 25px;
+}
+
+.Discography .list span {
+    color: #00ABC0;
+    font-size: 11px;
+    margin-top: 3px;
+    margin-left: auto;
+    font-family: "Pretendard Variable";
+}
+
+.Discography .list em {
+    margin-left: 25px;
+    margin-right: 20px;
+    font-size: 12px;
+    font-style: normal;
+    color: #888;
+    font-family: "Pretendard Variable";
+}
+
+/* 리스트에 on */
+.Discography .list li.on {
+    background-color: #333;
+}
+
+.Discography .list li.on .ico {
+    color: #333;
+    background-color: #E3CCF4;
+}
+
+.Discography .list li.on p {
+    color: #fff;
+}
+
+.Discography .list li.on span {
+    color: #E3CCF4;
+}
+
+
+.play {
+    position: absolute;
+    top: 11%;
+    left: 5%;
+}
+
+.play .txt {
+    margin-left: 5%;
+    color: #fff;
+    font-size: 24px;
+}
+
+.play .txt span {
+    font-size: 16px;
+}
+
+.play-bar {
+    color: #D8DAFF;
+    display: flex;
+    margin-left: 28px;
+    margin-top: 24px;
+}
+
+.play-bar .btn {
+    margin-left: 15px;
+    position: relative;
+}
+
+.play-bar .btn i {
+    margin-left: 5px;
+    cursor: url('../img/cursor2.png') 16 16, auto;
+
+}
+
+.play-bar .bar {
+    margin: 4px 15px;
+    width: 480px;
+    height: 8px;
+    border-radius: 99px;
+    background-color: rgba(240, 248, 233, 0.5);
+}
+
+.track {
+    position: relative;
+    width: 100%;
+    height: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 8px;
+    background-color: #D8DAFF;
+    border-radius: 4px;
+    transform-origin: left center;
+    transform: scaleX(0);
+}
+
+.fa-volume-xmark {
+    cursor: not-allowed;
+}
+
+
+/* play 영역의 이미지를 감싸는 li에 상대 위치 설정 */
+.play ul li {
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translatex(-50px);
+    transition: transform 0.8s ease-out, opacity 0.8s ease-out;
+}
+
+/* on 클래스가 추가될 때 원위치로 이동 및 투명도 1로 변경 */
+.play ul li.on {
+    opacity: 1;
+    transform: translatex(0);
+}
+
+.fa-play {
+    width: 20px;
+    text-align: center;
+    font-size: 13.5px;
+}
+
+
+
+/* 멤버소개 */
+.members {
+    background-image: url(../img/bg3.png);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    z-index: 1;
+}
+
+.card-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.card-list li {
+    position: absolute;
+    width: 220px;
+    height: 350px;
+    cursor: url('../img/cursor2.png') 16 16, auto;
+    perspective: 1000px;
+}
+
+/* 카드 위치 + float 애니메이션 적용 */
+.card-list li:nth-child(1) {
+    left: 50%;
+    top: 14%;
+    transform: translateX(-50%);
+    animation: float1 3s ease-in-out infinite 0s;
+}
+
+.card-list li:nth-child(2) {
+    left: 31.6%;
+    top: 35%;
+    animation: float2 3s ease-in-out infinite 0.3s;
+}
+
+.card-list li:nth-child(3) {
+    left: 19%;
+    top: 30%;
+    animation: float3 3s ease-in-out infinite 0.6s;
+}
+
+.card-list li:nth-child(4) {
+    right: 31.6%;
+    top: 35%;
+    animation: float4 3s ease-in-out infinite 0.9s;
+}
+
+.card-list li:nth-child(5) {
+    right: 19%;
+    top: 30%;
+    animation: float5 3s ease-in-out infinite 1.2s;
+}
+
+.card-list li:nth-child(6) {
+    left: 50%;
+    top: 53%;
+    transform: translateX(-50%);
+    animation: float6 3s ease-in-out infinite 1.5s;
+}
+
+/* 카드 앞/뒤 공통 */
+.card-list li img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px;
+    object-fit: cover;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease;
+}
+
+/* 카드 플립 */
+.card-list li img:first-child {
+    transform: rotateY(0deg);
+}
+
+.card-list li img:last-child {
+    transform: rotateY(180deg);
+}
+
+.card-list li:hover img:first-child {
+    transform: rotateY(-180deg);
+}
+
+.card-list li:hover img:last-child {
+    transform: rotateY(0deg);
+}
+
+
+/* float 애니메이션 keyframes */
+/* 중앙 정렬 필요 카드는 translateX 포함 */
+@keyframes float1 {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes float2 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float3 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float4 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float5 {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes float6 {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* 팝업 */
+.pro {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    color: #fff;
+    display: none;
+}
+
+.pro.on {
+    display: block;
+}
+
+.pro-popUp li {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 450px;
+    height: 700px;
+    font-family: "Pretendard Variable";
+    display: none;
+}
+
+.pro-popUp li.on {
+    display: block;
+}
+
+.pro-popUp img {
+    position: absolute;
+    width: 450px;
+}
+
+.logo-sm {
+    width: 100px;
+}
+
+.pro .bg {
+    cursor: url('../img/cursor2.png') 16 16, auto;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+}
+
+.pro p {
+    position: absolute;
+    font-family: 'BookendBatang';
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    bottom: 13%;
+
+    font-size: 22px;
+}
+
+.pro span {
+    position: absolute;
+    z-index: 1;
+    bottom: 2.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: 200;
+    font-size: 14px;
+    text-align: center;
+    line-height: 2.6;
+}
+
+/* 갤러리 */
+.gallery {
+    background-image: url(../img/bg2.png);
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px;
+    width: 100%;
+    cursor: url(../img/cursor3.png) 16 16, auto;
+}
+
+.container::-webkit-scrollbar {
+    height: 0px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.image-wrapper {
+    flex: 0 0 auto;
+    width: 520px;
+    height: 580px;
+    overflow: hidden;
+    border-radius: 15px;
+    transition: all 0.6s;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 효과 초기값 (작게 + 블러) */
+.image-wrapper.inactive {
+    transform: scale(0.7);
+    filter: blur(8px) brightness(0.7);
+    opacity: 0.7;
+    transition: all 0.3s;
+    border-radius: 50%;
+}
+
+/* 중앙 활성 이미지 (크게 + 선명) */
+.image-wrapper.active {
+    transform: scale(1);
+    filter: blur(0) brightness(1);
+}
+
+/* 푸터 */
+footer {
+    font-family: "Pretendard Variable";
+    font-size: 12px;
+    height: 70px;
+    background-color: #F0EEE9;
+    display: flex;
+    padding: 20px;
+}
+
+footer p {
+    margin-top: 23px;
+    margin-left: 40px;
+}
+
+footer div {
+    margin-left: auto;
+    text-align: right;
+    margin-top: 23px;
+    margin-right: 40px;
+}
+
+footer div a {
+    margin-left: 5px;
+    cursor: url(../img/cursor2.png) 16 16, auto;
+}
+
+footer div a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* 로딩페이지 */
+.diamond-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #e8f4fd 0%, #f5f0ff 50%, #fef7f7 100%);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'NexonLv1Gothic', sans-serif;
+    cursor: none;
+}
+
+.diamond-loading-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.diamond-loading-diamond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #c7d2fe, #ddd6fe, #fce7f3, #bfdbfe);
+    background-size: 400% 400%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(139, 69, 19, 0.1), 0 0 60px rgba(196, 181, 253, 0.2);
+    animation: diamond-loading-rotate 1.2s linear infinite, diamond-loading-gradientShift 2s ease-in-out infinite;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    /* 추가: 다이아몬드 사라지는 애니메이션 */
+}
+
+.diamond-loading-inner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.diamond-loading-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    /* 시작 시 약간 작게 */
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    /* 로고 등장 애니메이션 */
+}
+
+.diamond-loading-logo {
+    border-radius: 50%;
+    animation: diamond-loading-logoFloat 1.5s ease-in-out infinite;
+}
+
+.diamond-loading-progress-bar {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.diamond-loading-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #c7d2fe, #fce7f3, #bfdbfe);
+    border-radius: 2px;
+    width: 0%;
+    animation: diamond-loading-progressFill 2s ease-in-out infinite;
+}
+
+/* 애니메이션 정의 */
+@keyframes diamond-loading-rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+}
+
+@keyframes diamond-loading-gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes diamond-loading-logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes diamond-loading-pulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes diamond-loading-progressFill {
+    0% {
+        width: 0%;
+    }
+
+    80% {
+        width: 90%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* 로딩 완료 상태 */
+.diamond-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'NexonLv1Gothic', sans-serif;
+}
+
+.diamond-loading-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.diamond-loading-diamond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 150px;
+    height: 150px;
+    background-size: 400% 400%;
+    border-radius: 20px;
+    box-shadow: 0 0 30px rgba(139, 69, 19, 0.1), 0 0 60px rgba(196, 181, 253, 0.2);
+    animation: diamond-loading-rotate 1.2s linear infinite, diamond-loading-gradientShift 2s ease-in-out infinite;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    /* 추가: 다이아몬드 사라지는 애니메이션 */
+}
+
+.diamond-loading-inner {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+
+.diamond-loading-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    /* 시작 시 약간 작게 */
+    opacity: 0;
+    transition: opacity 0.6s ease-in-out, transform 0.6s ease-in-out;
+    /* 로고 등장 애니메이션 */
+}
+
+.diamond-loading-logo {
+    border-radius: 50%;
+    animation: diamond-loading-logoFloat 1.5s ease-in-out infinite;
+}
+
+.diamond-loading-text {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #8b5cf6;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    animation: diamond-loading-pulse 1.5s ease-in-out infinite;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.diamond-loading-progress-bar {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    height: 4px;
+    background: rgba(139, 92, 246, 0.2);
+    border-radius: 2px;
+    overflow: hidden;
+    transition: opacity 0.6s ease-in-out;
+}
+
+.diamond-loading-progress-fill {
+    height: 100%;
+    background: #333;
+    border-radius: 2px;
+    width: 0%;
+    animation: diamond-loading-progressFill 2s ease-in-out infinite;
+}
+
+/* 애니메이션 정의 */
+@keyframes diamond-loading-rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+}
+
+@keyframes diamond-loading-gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes diamond-loading-logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes diamond-loading-pulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes diamond-loading-progressFill {
+    0% {
+        width: 0%;
+    }
+
+    80% {
+        width: 90%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* 로딩 완료 상태 */
+.diamond-loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'NexonLv1Gothic', sans-serif;
+}
+
+.diamond-loading-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+}
+
+.diamond-loading-diamond {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #c7d2fe, #ddd6fe, #fce7f3, #bfdbfe);
+    border-radius: 20px;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+    animation: diamond-loading-rotate 1.2s linear infinite, diamond-loading-gradientShift 2s ease-in-out infinite;
+}
+
+.diamond-loading-logo-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    opacity: 0;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.diamond-loading-logo {
+    border-radius: 50%;
+    animation: diamond-loading-logoFloat 1.5s ease-in-out infinite;
+}
+
+/* 텍스트와 프로그레스 바의 공통 transform 속성 합치기 */
+.diamond-loading-text,
+.diamond-loading-progress-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.4s ease-in-out;
+}
+
+.diamond-loading-text {
+    bottom: -60px;
+    color: #F0EEE9;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    opacity: 0.8;
+    animation: diamond-loading-pulse 1.5s ease-in-out infinite;
+}
+
+.diamond-loading-progress-bar {
+    bottom: -100px;
+    width: 200px;
+    height: 4px;
+    background: rgba(196, 181, 253, 0.2);
+    opacity: 0.7;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.diamond-loading-progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #F0EEE9, #E3CCF4, #EEC1CE);
+    border-radius: 2px;
+    width: 0%;
+    animation: diamond-loading-progressFill 2s ease-in-out infinite;
+}
+
+/* 애니메이션 정의 */
+@keyframes diamond-loading-rotate {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) rotate(405deg);
+    }
+}
+
+@keyframes diamond-loading-gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes diamond-loading-logoFloat {
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes diamond-loading-pulse {
+
+    0%,
+    100% {
+        opacity: 0.8;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+@keyframes diamond-loading-progressFill {
+    0% {
+        width: 0%;
+    }
+
+    80% {
+        width: 90%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/* 로딩 완료 상태 */
+.diamond-loading-container.diamond-loading-opened .diamond-loading-diamond {
+    animation: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) rotate(45deg) scale(0);
+}
+
+
+.diamond-loading-container.diamond-loading-opened .diamond-loading-logo-container {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    transition-delay: 0.3s;
+}
+
+/* 로딩 완료 시 텍스트 및 프로그레스 바 숨기기 */
+.diamond-loading-container.diamond-loading-opened .diamond-loading-text,
+.diamond-loading-container.diamond-loading-opened .diamond-loading-progress-bar {
+    opacity: 0;
+    animation: none;
+    transition: all 0.8s;
+}

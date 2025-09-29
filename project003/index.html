@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFRIEND</title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <script src="js/js.js"></script>
+
+    <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/5b60675eee.js" crossorigin="anonymous"></script>
+    <!-- 웹/앱 파비콘 -->
+    <link rel="apple-touch-icon" href="img/web-ico.png">
+    <link rel="shortcut icon" href="img/web-ico.png">
+</head>
+
+
+<body>
+
+    <!-- 로딩 페이지 -->
+    <div class="diamond-loading-overlay" id="diamondLoadingOverlay">
+        <div class="diamond-loading-container" id="diamondLoadingContainer">
+
+            <div class="diamond-loading-diamond">
+                <div class="diamond-loading-inner"></div>
+            </div>
+
+
+            <div class="diamond-loading-split">
+                <div class="diamond-loading-half"></div>
+                <div class="diamond-loading-half diamond-loading-right"></div>
+            </div>
+
+            <!-- 로고 -->
+            <div class="diamond-loading-logo-container">
+                <div class="diamond-loading-logo"><img src="img/logo-lo.png" alt=""></div>
+            </div>
+
+            <!-- 로딩 텍스트 -->
+            <div class="diamond-loading-text">Loading...</div>
+
+            <!-- 프로그레스 바 -->
+            <div class="diamond-loading-progress-bar">
+                <div class="diamond-loading-progress-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="logo"><img src="img/logo.png" alt="" width="120px"></div>
+    <nav>
+        <ul>
+            <li class="on">HOME</li>
+            <li>DISCOGRAPHY</li>
+            <li>MEMBERS</li>
+            <li>GALLERY</li>
+        </ul>
+    </nav>
+
+    <div class="mouse">
+        <div class="mouse1">
+            <img src="img/mouse1.png" alt="">
+            <img src="img/mouse2.png" alt="">
+            <div class="line"></div>
+        </div>
+
+        <div class="mouse2">
+            TOP
+        </div>
+    </div>
+
+    <div id="wrap">
+
+        <!-- 홈 -->
+        <section class="home">
+            <p>겨울에 만난 소녀들,<br>
+                그들의 무한한 가능성</p>
+            <p>여자친구 (GFRIEND)</p>
+
+            <video id="myVideo" muted loop>
+                <source src="img/movie.mp4" type="video/mp4">
+            </video>
+        </section>
+
+        <!-- 앨범 -->
+        <section class="Discography">
+            <div class="play">
+                <ul>
+                    <li class="on">
+                        <img src="img/cover1.png" alt="">
+                        <div class="txt">
+                            <p>우리의 다정한 계절 속에 (Season of Memories)</p>
+                            <span>Special Album</span>
+                        </div>
+                    </li>
+
+                    <div class="play-bar">
+                        <div class="btn">
+                            <i class="fa-solid fa-backward-step"></i>
+                            <i class="fa-solid fa-play"></i>
+                            <i class="fa-solid fa-pause"></i>
+                            <i class="fa-solid fa-forward-step"></i>
+                        </div>
+                        <div class="bar">
+                            <div class="track">
+                                <div class="fill"></div>
+                            </div>
+                        </div>
+                        <i class="fa-solid fa-volume-xmark"></i>
+                    </div>
+                </ul>
+            </div>
+            <div class="list">
+                <ul>
+                    <li class="on" data-src="img/cover1.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>우리의 다정한 계절 속에 (Season of Memories)</p>
+                        <span>Special Album</span>
+                        <em>03:06</em>
+                    </li>
+                    <li data-src="img/cover2.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>유리구슬 (Glass Bead)</p>
+                        <span>Season of Glass</span>
+                        <em>03:24</em>
+                    </li>
+                    <li data-src="img/cover3.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>오늘부터 우리는 (Me gustas tu)</p>
+                        <span>Flower Bud</span>
+                        <em>3:41</em>
+                    </li>
+                    <li data-src="img/cover4.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>시간을 달려서 (Rough)</p>
+                        <span>SNOWFLAKE</span>
+                        <em>3:30</em>
+                    </li>
+                    <li data-src="img/cover5.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>너 그리고 나 (NAVILLERA)</p>
+                        <span>LOL</span>
+                        <em>03:14</em>
+                    </li>
+                    <li data-src="img/cover6.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>FINGERTIP</p>
+                        <span>THE AWAKENING</span>
+                        <em>03:31</em>
+                    </li>
+                    <li data-src="img/cover7.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>귀를 기울이면 (LOVE WHISPER)</p>
+                        <span>PARALLEL</span>
+                        <em>03:32</em>
+                    </li>
+                    <li data-src="img/cover8.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>여름비 (SUMMER RAIN)</p>
+                        <span>RAINBOW</span>
+                        <em>03:21</em>
+                    </li>
+                    <li data-src="img/cover9.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>밤 (Time for the moon night)</p>
+                        <span>Time for the moon night</span>
+                        <em>03:47</em>
+                    </li>
+                    <li data-src="img/cover10.png">
+                        <div class="ico"><i class="fa-solid fa-music"></i></div>
+                        <p>교차로 (Crossroads)</p>
+                        <span>回:LABYRINTH</span>
+                        <em>03:22</em>
+                    </li>
+                </ul>
+
+
+
+            </div>
+
+        </section>
+
+        <!-- 멤버소개 -->
+        <section class="members">
+            <ul class="card-list">
+                <li>
+                    <div class="card-float">
+                        <img src="img/cad1.png" alt="">
+                        <img src="img/cad1-1.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="card-float">
+                        <img src="img/cad2.png" alt="">
+                        <img src="img/cad2-1.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="card-float">
+                        <img src="img/cad3.png" alt="">
+                        <img src="img/cad3-1.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="card-float">
+                        <img src="img/cad4.png" alt="">
+                        <img src="img/cad4-1.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="card-float">
+                        <img src="img/cad5.png" alt="">
+                        <img src="img/cad5-1.png" alt="">
+                    </div>
+                </li>
+                <li>
+                    <div class="card-float">
+                        <img src="img/cad6.png" alt="">
+                        <img src="img/cad6-1.png" alt="">
+                    </div>
+                </li>
+            </ul>
+
+            <div class="pro">
+                <ul class="pro-popUp">
+                    <li>
+                        <img src="img/cad1-2.png" alt="">
+                        <p>소원 — SOWON</p>
+                        <span>1995. 12. 07.
+                            <br>
+                            리더&서브보컬
+                        </span>
+                    </li>
+                    <li>
+                        <img src="img/cad2-2.png" alt="">
+                        <p>예린 — YERIN</p>
+                        <span>1996. 08. 19.
+                            <br>
+                            서브보컬&리드댄서
+                        </span>
+                    </li>
+                    <li>
+                        <img src="img/cad3-2.png" alt="">
+                        <p>은하 — EUNHA</p>
+                        <span>1997. 05. 30.
+                            <br>
+                            리드보컬
+                        </span>
+                    </li>
+                    <li>
+                        <img src="img/cad4-2.png" alt="">
+                        <p>유주 — YUJU</p>
+                        <span>1997. 10. 04.
+                            <br>
+                            메인보컬
+                        </span>
+                    </li>
+                    <li>
+                        <img src="img/cad5-2.png" alt="">
+                        <p>신비 — SINB</p>
+                        <span>1998. 06. 03.
+                            <br>
+                            메인댄서&서브보컬
+                        </span>
+                    </li>
+                    <li>
+                        <img src="img/cad6-2.png" alt="">
+                        <p>엄지 — UMJI</p>
+                        <span>1998. 08. 19.
+                            <br>
+                            서브보컬
+                        </span>
+                    </li>
+                </ul>
+
+                <div class="bg"></div>
+            </div>
+
+        </section>
+
+
+        <!-- 갤러리 -->
+        <section class="gallery">
+
+            <div class="container">
+                <div class="image-wrapper">
+                    <img src="img/img1.jpg" alt="Image 1" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img20.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img3.jpg" alt="Image 3" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img4.jpg" alt="Image 4" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img5.jpg" alt="Image 5" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img6.jpg" alt="Image 6" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img7.jpg" alt="Image 7" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img8.jpg" alt="Image 8" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img9.jpg" alt="Image 9" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img10.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img11.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img12.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img13.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img14.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img15.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img16.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img17.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img18.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img19.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img21.jpg" alt="Image 10" class="image">
+                </div>
+                <div class="image-wrapper">
+                    <img src="img/img22.jpg" alt="Image 10" class="image">
+                </div>
+            </div>
+
+        </section>
+
+
+    </div>
+
+
+    <footer>
+        <p>본 페이지는 포트폴리오용으로 제작된 사이트 입니다.<br>
+            해당 사이트의 이미지와 동영상, 기타 상세 내용은 상업용으로 사용하지 않으며 일부 리소스는 AI로 제작되었음을 밝힙니다.</p>
+        <div>
+            Copyright ⓒ 2025.ISAEEUN.All Rights Reserved.
+            <br>
+            <i class="fa-brands fa-github"></i><a href="https://github.com/todms0925/portfolio2025"
+                target="_blank">Github</a>
+        </div>
+    </footer>
+
+
+
+</body>
+
+</html>
