@@ -1,183 +1,271 @@
-$(document).ready(function(){
-    // 처음엔 서브메뉴 숨김
-    $(".sub").hide();
+$(function () {
+  /* ---------------- 메뉴(hover) ---------------- */
+  $(".sub").hide();
+  $(".menu > li").hover(
+    function () { $(this).find(".sub").stop(true, true).slideDown(300); },
+    function () { $(this).find(".sub").stop(true, true).slideUp(300); }
+  );
 
-    // hover 시 애니메이션 효과
-    $(".menu > li").hover(
-        function(){ // mouseenter
-            $(this).find(".sub").stop(true, true).slideDown(300);
-        },
-        function(){ // mouseleave
-            $(this).find(".sub").stop(true, true).slideUp(300);
-        }
-    );
+  /* ---------------- 슬라이더 (이미지/텍스트) ---------------- */
+  (function () {
+    var $imgSlides = $('.slider_img ul li');
+    var $txtSlides = $('.box1-2 .slider > li');
+    var $indis = $('.s_btn ul li');
+    var total = $imgSlides.length;
+    var current = 0;
+    var timer = null;
+    var interval = 4000;
 
-
-
-//슬라이드
-$(function(){
-  var $imgSlides = $('.slider_img ul li');        // 이미지 슬라이드
-  var $txtSlides = $('.box1-2 .slider > li');    // 텍스트 슬라이드
-  var $indis     = $('.s_btn ul li');            // s_btn 순번 버튼
-  var total      = $imgSlides.length;
-  var current    = 0;
-  var timer      = null;
-  var interval   = 4000;
-
-  // 초기 상태
-  $imgSlides.hide().eq(0).show();
-  $txtSlides.removeClass('on').eq(0).addClass('on');
-  $indis.removeClass('on').eq(0).addClass('on');
-
-  // slider_btnS 초기 상태
-  $('.slider_btnS a').removeClass('on').eq(0).addClass('on');
-
-  function showSlide(index){
-    index = (index + total) % total;
-
-    // 이미지
-    $imgSlides.fadeOut(600).eq(index).fadeIn(600);
-
-    // 텍스트
-    $txtSlides.removeClass('on').eq(index).addClass('on');
-
-    // s_btn 순번
-    $indis.removeClass('on').eq(index).addClass('on');
-
-    current = index;
-  }
-
-  function nextSlide(){ showSlide(current + 1); }
-  function prevSlide(){ showSlide(current - 1); }
-
-  // 좌/우 버튼 클릭
-  $('.slider_btnR a').on('click', function(e){
-    e.preventDefault();
-    nextSlide();
-    resetTimer();
-  });
-
-  $('.slider_btnL a').on('click', function(e){
-    e.preventDefault();
-    prevSlide();
-    resetTimer();
-  });
-
-  // s_btn 순번 클릭
-  $indis.on('click', function(){
-    var idx = $(this).index();
-    showSlide(idx);
-    resetTimer();
-  });
-
-  // 자동재생
-  function startTimer(){
-    stopTimer();
-    timer = setInterval(nextSlide, interval);
-
-    // 재생 중 → slider_btnS 첫번째 a
+    $imgSlides.hide().eq(0).show();
+    $txtSlides.removeClass('on').eq(0).addClass('on');
+    $indis.removeClass('on').eq(0).addClass('on');
     $('.slider_btnS a').removeClass('on').eq(0).addClass('on');
-  }
 
-  function stopTimer(){
-    if(timer){ clearInterval(timer); timer = null; }
+    function showSlide(index) {
+      index = (index + total) % total;
+      $imgSlides.stop(true, true).fadeOut(600).eq(index).fadeIn(600);
+      $txtSlides.removeClass('on').eq(index).addClass('on');
+      $indis.removeClass('on').eq(index).addClass('on');
+      current = index;
+    }
+    function nextSlide() { showSlide(current + 1); }
+    function prevSlide() { showSlide(current - 1); }
 
-    // 멈춤 중 → slider_btnS 두번째 a
-    $('.slider_btnS a').removeClass('on').eq(1).addClass('on');
-  }
+    $('.slider_btnR a').on('click', function (e) { e.preventDefault(); nextSlide(); resetTimer(); });
+    $('.slider_btnL a').on('click', function (e) { e.preventDefault(); prevSlide(); resetTimer(); });
 
-  function resetTimer(){
-    stopTimer();
+    $indis.on('click', function () { showSlide($(this).index()); resetTimer(); });
+
+    function startTimer() {
+      stopTimer();
+      timer = setInterval(nextSlide, interval);
+      $('.slider_btnS a').removeClass('on').eq(0).addClass('on');
+    }
+    function stopTimer() {
+      if (timer) { clearInterval(timer); timer = null; }
+      $('.slider_btnS a').removeClass('on').eq(1).addClass('on');
+    }
+    function resetTimer() { stopTimer(); startTimer(); }
+
+    $('.slider_btnS a').on('click', function (e) {
+      e.preventDefault();
+      if (timer) stopTimer(); else startTimer();
+    });
+
     startTimer();
-  }
+  })();
 
-  // slider_btnS 클릭 → 자동재생 토글
-  $('.slider_btnS a').on('click', function(e){
-    e.preventDefault();
-    if(timer){
-      stopTimer();   // 재생 중 → 멈춤
-    } else {
-      startTimer();  // 멈춤 중 → 재생
+  /* ---------------- 공지사항 텍스트 롤링 ---------------- */
+  (function () {
+    var $ul = $('.notice ul');
+    var animTime = 600;
+    var delay = 3000;
+    var timer = null;
+
+    if ($ul.length === 0) return;
+    if ($ul.children('li').length <= 1) return;
+
+    function rollOnce() {
+      var $lis = $ul.children('li');
+      var itemH = $lis.first().outerHeight(true);
+
+      $lis.each(function () {
+        $(this).css('transition', 'transform ' + animTime + 'ms');
+        $(this).css('transform', 'translateY(-' + itemH + 'px)');
+      });
+
+      setTimeout(function () {
+        $lis.css('transition', 'none');
+        $ul.children('li').first().appendTo($ul);
+        $ul[0].offsetHeight; // force reflow
+        $ul.children('li').css('transform', 'none').css('transition', '');
+      }, animTime);
+    }
+
+    function start() { if (!timer) timer = setInterval(rollOnce, delay); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+
+    start();
+  })();
+
+  /* ---------------- 리뷰 슬라이더 (드래그 바) ---------------- */
+  (function () {
+    const $slider1 = $(".review_silder1");
+    const $slider2 = $(".review_silder2");
+    const $bar = $(".review_bar2");
+    const $barTrack = $(".review_bar1");
+
+    // 안전 체크
+    if ($slider1.length === 0 || $slider2.length === 0 || $bar.length === 0 || $barTrack.length === 0) return;
+
+    let sliderWidth = $slider1.width();
+    let position = 0;
+    let speed = 1;
+    let barMax = Math.max(0, $barTrack.width() - $bar.width());
+
+    let interval;
+    let dragging = false;
+    let startX = 0;
+    let barX = 0;
+
+    function updateUI() {
+      $slider1.css("transform", "translateX(" + position + "px)");
+      $slider2.css("transform", "translateX(" + (position + sliderWidth) + "px)");
+      let progress = Math.abs(position % sliderWidth) / sliderWidth;
+      $bar.css("transform", "translateX(" + (progress * barMax) + "px)");
+    }
+
+    function moveSlider() {
+      if (!dragging) {
+        position -= speed;
+        if (position <= -sliderWidth) position = 0;
+        updateUI();
+      }
+    }
+
+    function startAuto() { if (!interval) interval = setInterval(moveSlider, 16); }
+    function stopAuto() { clearInterval(interval); interval = null; }
+
+    startAuto();
+    $(".review_silder").hover(stopAuto, startAuto);
+
+    // 바 초기 transform값 읽기 (안전하게)
+    function getBarTranslateX() {
+      var tf = $bar.css("transform");
+      if (!tf || tf === "none") return 0;
+      var m = tf.match(/matrix\((.+)\)/);
+      if (!m) return 0;
+      var vals = m[1].split(',');
+      return parseFloat(vals[4]) || 0;
+    }
+
+    $bar.on("mousedown", function (e) {
+      dragging = true;
+      stopAuto();
+      startX = e.pageX;
+      barX = getBarTranslateX();
+
+      $(document).on("mousemove.drag", onDrag);
+      $(document).on("mouseup.drag", onStop);
+    });
+
+    function onDrag(e) {
+      let dx = e.pageX - startX;
+      let newX = Math.min(Math.max(barX + dx, 0), barMax);
+      $bar.css("transform", "translateX(" + newX + "px)");
+      let progress = newX / (barMax || 1);
+      position = -(progress * sliderWidth);
+      $slider1.css("transform", "translateX(" + position + "px)");
+      $slider2.css("transform", "translateX(" + (position + sliderWidth) + "px)");
+    }
+
+    function onStop() {
+      dragging = false;
+      startAuto();
+      $(document).off("mousemove.drag mouseup.drag");
+    }
+  })();
+
+  /* ---------------- 예매(달력) ---------------- */
+  // selectedDate: 항상 YYYY-MM-DD 형태로 유지
+  var selectedDate = $.datepicker.formatDate("yy-mm-dd", new Date());
+
+  // #calendar 초기화 (jQuery UI datepicker 사용 가정)
+  $("#calendar").datepicker({
+    dateFormat: "yy-mm-dd",
+    defaultDate: new Date(),
+    onSelect: function (dateText) {
+      selectedDate = dateText; // YYYY-MM-DD
+      $(".date p").html(dateText + ' <i class="fa-solid fa-calendar"></i>');
+      var parts = dateText.split("-");
+      // .res-date는 화면용(월/일) - 숫자만으로 표시(9/30)
+      $(".res-date").text(parseInt(parts[1], 10) + "/" + parseInt(parts[2], 10));
+      $("#calendar").hide();
     }
   });
 
-  // 자동 시작
-  startTimer();
-});
+  // 초기 표시
+  $(".date p").html(selectedDate + ' <i class="fa-solid fa-calendar"></i>');
+  $("#calendar").datepicker("setDate", new Date());
+  var tParts = selectedDate.split("-");
+  $(".res-date").text(parseInt(tParts[1], 10) + "/" + parseInt(tParts[2], 10));
+  $("#calendar").hide();
 
-//___________________
-// 공지사항 텍스트롤링
-$(function(){
-  var $ul = $('.notice ul');
-  var animTime = 600;   // 애니메이션 시간(ms)
-  var delay = 3000;     // 다음 항목으로 넘어가는 간격(ms)
-  var timer = null;
+  // .date 클릭 토글
+  $(".date").on("click", function (e) {
+    e.stopPropagation();
+    $("#calendar").toggle();
+  });
+  $("#calendar").on("click", function (e) { e.stopPropagation(); });
+  $(document).on("click", function () { $("#calendar").hide(); });
 
-  // 안전 체크: li가 1개 이하이면 동작 안 함
-  if ($ul.length === 0) return;
-  if ($ul.children('li').length <= 1) return;
+  /* ---------------- 예매 팝업 ---------------- */
+  $(".re-popUp1, .re-popUp2, .re-popUp-bg").hide();
 
-  function rollOnce(){
-    // 매번 최신 li 높이(마진 포함) 계산 — 반응형 대응
-    var $lis = $ul.children('li');
-    var itemH = $lis.first().outerHeight(true);
+  // 팝업 열기: 항상 selectedDate(YYYY-MM-DD)를 사용
+  $(".res_btn_big, .res_btn").on("click", function () {
+    $(".re-popUp-bg").show().addClass("active");
+    $(".re-popUp1").show().addClass("active").removeClass("closing");
 
-    // 1) 모든 li를 위로 이동시키기 (transform 적용)
-    $lis.each(function(){
-      // 명시적으로 transition을 설정해서 부드럽게 이동
-      $(this).css('transition', 'transform ' + animTime + 'ms');
-      $(this).css('transform', 'translateY(-' + itemH + 'px)');
-    });
+    // 팝업에 날짜: YYYY-MM-DD
+    $(".re-popUp1 .re-date").text(selectedDate);
 
-    // 2) 애니메이션 끝난 후: 첫 li를 맨 뒤로 옮기고 transform 초기화
-    setTimeout(function(){
-      // transition 제거(스냅해서 자리로 돌아가게)
-      $lis.css('transition', 'none');
+    // 팝업에 선택된 이름 반영
+    var selectText = $("#select option:selected").text() || "";
+    $(".re-popUp1 .name").text(selectText);
+  });
 
-      // 첫 항목을 맨 끝으로 이동
-      var $first = $ul.children('li').first();
-      $first.appendTo($ul);
+  // 팝업1 닫기 (i 또는 2번째 버튼)
+  $(document).on("click", ".re-popUp1 i, .re-popBtn span:eq(1)", function () {
+    $(".re-popUp1").removeClass("active").addClass("closing");
+    $(".re-popUp-bg").removeClass("active");
+    setTimeout(function () {
+      $(".re-popUp1, .re-popUp-bg").hide().removeClass("closing");
+    }, 400);
+  });
 
-      // 강제 reflow (브라우저가 변화를 확실히 인지하게 함)
-      // eslint-disable-next-line no-unused-expressions
-      $ul[0].offsetHeight;
+  // 팝업1 -> 팝업2 (즉시 전환)
+  $(document).on("click", ".re-popBtn span:eq(0)", function () {
+    $(".re-popUp1").hide().removeClass("active closing");
+    $(".re-popUp2").show().addClass("active").removeClass("closing");
+  });
 
-      // 모든 li transform 리셋 (다음 애니 때 대비)
-      $ul.children('li').css('transform', 'none');
-      // transition 인라인 비워두기(다음 롤에서 다시 세팅)
-      $ul.children('li').css('transition', '');
-    }, animTime);
-  }
+  // 팝업2 닫기 (모두 닫기)
+  $(document).on("click", ".re-popUp2 span", function () {
+    $(".re-popUp1, .re-popUp2").removeClass("active").addClass("closing");
+    $(".re-popUp-bg").removeClass("active");
+    setTimeout(function () {
+      $(".re-popUp1, .re-popUp2, .re-popUp-bg").hide().removeClass("closing");
+    }, 400);
+  });
 
-  function start(){
-    if (!timer) timer = setInterval(rollOnce, delay);
-  }
-  function stop(){
-    if (timer){ clearInterval(timer); timer = null; }
-  }
+  /* ---------------- 전시 탭 ---------------- */
+  $(".list_title ul li").on("click", function () {
+    var idx = $(this).index();
+    $(".list_title ul li").removeClass("on").eq(idx).addClass("on");
+    $(".exh_1 li").removeClass("on").eq(idx).addClass("on");
+    $(".more .list_txt li").removeClass("on").eq(idx).addClass("on");
 
-  // 자동 시작
-  start();
-});
-
-
-
-
-
-
-
-
-
-
-
+    var bgColor = "#fee440";
+    if (idx === 1) bgColor = "#FF4C4C";
+    else if (idx === 2) bgColor = "#1DDDFF";
+    $(".more").css("background-color", bgColor);
+  });
 
 
+  // top 버튼 클릭 부드럽게 스크롤
+  $("a[href='#top']").on("click", function (e) {
+    e.preventDefault();
+    $("html, body").animate({ scrollTop: 0 }, 600);
+  });
+
+}); // end $(function)
 
 
 
 
-    
-});
+
+
 
 
 

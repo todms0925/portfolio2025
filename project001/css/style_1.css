@@ -32,7 +32,13 @@ body {
     font-family: "Noto Sans KR", sans-serif;
     color: #fff;
     overflow-x: hidden;
+
 }
+
+html {
+    scroll-behavior: auto;
+}
+
 
 /* 섹션명 */
 h2 {
@@ -104,6 +110,7 @@ h2 img {
 .util ul li:nth-child(1) a:hover {
     background-color: #fee440;
     border: solid 1px #fee440;
+    color: #333;
 }
 
 .util img {
@@ -462,6 +469,7 @@ i {
 }
 
 /* 예매하기 */
+
 .box3 h2 {
     margin-top: 60px;
     margin-bottom: 20px;
@@ -473,16 +481,27 @@ i {
 }
 
 .reservation1 {
-    background-color: #26265B;
     width: 300px;
     height: 330px;
-    border-radius: 14px;
+
 }
 
 .res1-1 {
-    padding: 25px 30px;
+    overflow: hidden;
+    width: 300px;
+    height: 330px;
+    overflow-y: scroll;
+    padding-right: 12px;
+}
+
+.res1-1 li {
+    width: 235px;
+    height: 284px;
     font-size: 20px;
-    position: relative;
+    padding: 24px 30px;
+    background-color: #26265B;
+    margin-bottom: 25px;
+    border-radius: 14px;
 }
 
 .res1-2 {
@@ -507,7 +526,8 @@ i {
     font-size: 28px;
 }
 
-.res1-3 p {
+.res_btn_big {
+    cursor: pointer;
     margin-left: auto;
     background-color: #fee440;
     font-family: 'Paperlogy';
@@ -515,32 +535,29 @@ i {
     padding: 10px 14px;
     border-radius: 8px;
     font-size: 20px;
+    color: #333;
 }
 
-.res1-3 p a i {
+.res1-3 p i {
     color: #333;
     margin-left: 5px;
 }
 
-.res_slider ul {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 35px;
+.res1-1::-webkit-scrollbar {
+    width: 8px;
 }
 
-.res_slider ul li {
-    background-color: #54546E;
-    width: 9px;
-    height: 9px;
-    border-radius: 50px;
-    margin: 0 5px;
+/* 스크롤바 트랙 (배경) */
+.res1-1::-webkit-scrollbar-track {
+    background: none;
+    border-radius: 10px;
 }
 
-.res_slider ul i {
-    color: #54546E;
-    margin: 0 8px;
-    font-size: 22px;
+/* 스크롤바 핸들 */
+.res1-1::-webkit-scrollbar-thumb {
+    background: #54546E;
+    border-radius: 10px;
+    cursor: pointer;
 }
 
 .reservation2 {
@@ -558,16 +575,75 @@ i {
     margin-right: 10px;
     align-items: center;
     justify-content: center;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .date p {
-    margin-bottom: 1px;
+    position: absolute;
+    left: 20%;
+    top: 5px;
 }
 
 .date i {
     color: #fee440;
     font-size: 16px;
-    margin-left: 8px;
+    margin-left: 3px;
+    margin-top: 2px;
+}
+
+/* 달력 디자인 */
+#calendar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 4px;
+    z-index: 1000;
+    background: #fff;
+    border: 1px solid #ccc;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+    border: 1px solid #FF6B6B;
+    background-color: #FF6B6B;
+    color: #555;
+}
+
+.ui-widget-header {
+    background-color: #FF6B6B;
+    border: none;
+}
+
+
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+    background-color: #fee440;
+    border: none;
+    color: #050527;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+    border: none;
+    text-align: center;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 .calender form {
@@ -616,6 +692,11 @@ i {
     margin-left: 25px;
 }
 
+.ui-widget-content {
+    border: none;
+    background: #eee;
+}
+
 .res-group {
     display: flex;
     align-items: center;
@@ -625,7 +706,11 @@ i {
     margin-right: 20px;
 }
 
-.res_btn a {
+.res_btn {
+    cursor: pointer;
+}
+
+.res_btn span {
     background-color: #fee440;
     font-family: 'Paperlogy';
     font-weight: 700;
@@ -633,6 +718,7 @@ i {
     padding-left: 25px;
     border-radius: 0 8px 8px 0;
     font-size: 20px;
+    color: #333;
 }
 
 .res_btn i {
@@ -640,8 +726,199 @@ i {
     color: #333;
 }
 
+/* 예매팝업 */
+
+.re-popUp1 {
+    position: fixed;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    width: 300px;
+    height: 320px;
+    color: #050527;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.re-popUp2 {
+    position: fixed;
+    z-index: 9;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #eee;
+    width: 300px;
+    height: 130px;
+    color: #050527;
+    border-radius: 10px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.re-popUp1 p {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    left: 50%;
+    transform: translate(-50%);
+    top: 15%;
+}
+
+.re-popUp-bg {
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.re-popUp1 i {
+    color: #050527;
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    cursor: pointer;
+}
+
+.re-popBtn {
+    display: flex;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%);
+    font-size: 14px;
+}
+
+.re-popBtn span {
+    cursor: pointer;
+    border: 1px solid #26265B;
+    border-radius: 90px;
+    width: 95px;
+    text-align: center;
+    margin: 0px 5px;
+    transition: all 0.3s;
+    height: 25px;
+    line-height: 1.8;
+}
+
+.re-popBtn span:nth-child(2):hover {
+    background-color: #FF4C4C;
+}
+
+.re-popBtn span:nth-child(1):hover {
+    background-color: #1DDDFF;
+}
 
 
+#mumber-to-show {
+    border: none;
+    border-radius: 5px;
+    padding: 3px 10px;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 15px;
+}
+
+.re-popUp1 {
+    background: #eee;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 420px;
+    padding: 40px 50px;
+}
+
+
+.info-table {
+    margin-top: 18%;
+    margin-bottom: 40px;
+}
+
+.info-row {
+    display: flex;
+    padding: 16px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.info-label {
+    font-weight: 700;
+    font-size: 15px;
+    color: #000;
+    min-width: 80px;
+}
+
+
+.re-popUp2 p {
+    position: absolute;
+    font-size: 18px;
+    font-weight: bold;
+    left: 50%;
+    transform: translate(-50%);
+    top: 28%;
+}
+
+.re-popUp2 i {
+    color: #26265B;
+}
+
+.re-popUp2 span {
+    cursor: pointer;
+    border: 1px solid #555;
+    color: #555;
+    line-height: 1.8;
+    border-radius: 90px;
+    width: 100px;
+    height: 25px;
+    text-align: center;
+    margin: 0px 5px;
+    transition: all 0.3s;
+    position: absolute;
+    font-size: 14px;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 18%;
+}
+
+.re-popUp2 span:hover {
+    color: #fff;
+    background-color: #555;
+}
+
+/* 등장 애니메이션 (위에서 내려옴) */
+.re-popUp1.active,
+.re-popUp2.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) translateY(0);
+}
+
+/* 닫힐 때 애니메이션 (아래로 내려가며 사라짐) */
+.re-popUp1.closing,
+.re-popUp2.closing {
+    opacity: 0;
+    transform: translate(-50%, -50%) translateY(30px);
+}
+
+/* 배경 */
+.re-popUp-bg {
+    position: fixed;
+    z-index: 8;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(3px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.re-popUp-bg.active {
+    opacity: 1;
+    display: block;
+}
 
 /* 관람안내 */
 .box4 {
@@ -736,12 +1013,13 @@ i {
     margin-left: auto;
 }
 
-.map .car a {
+.map .car span {
     background-color: #fee440;
     font-family: 'Paperlogy';
     font-weight: 600;
     padding: 10px 20px;
     border-radius: 5px;
+    color: #333;
 }
 
 .map .car i {
@@ -844,17 +1122,18 @@ i {
 
 .exh_h {
     background-color: #26265B;
-    padding: 12px;
-    width: 100%;
+    width: 1364px;
+    height: 95px;
+    margin: 0 auto;
 }
 
 .exh h2 {
-    margin-top: 14px;
-    margin-bottom: 14px;
+    margin-top: 30px;
 }
 
 .exh_h .list_title {
     margin-left: auto;
+    margin-bottom: 12px;
 }
 
 .exh .list_title ul {
@@ -866,65 +1145,62 @@ i {
     margin-top: 24px;
 }
 
-.exh .list_title ul li a {
+.exh .list_title ul li p {
     padding: 7px 30px;
     border-radius: 40px;
     margin: 10px;
     color: #fff;
+    cursor: pointer;
 }
 
 
-.list_title ul li:nth-child(1) a:hover {
+.list_title ul li:nth-child(1) p:hover {
     background-color: #fee440;
     color: #333;
 }
 
-.list_title ul li:nth-child(1).on a {
+.list_title ul li:nth-child(1).on p {
     background-color: #fee440;
     color: #333;
 }
 
-.list_title ul li:nth-child(2) a:hover {
+.list_title ul li:nth-child(2) p:hover {
     background-color: #FF4C4C;
     color: #333;
 }
 
-.list_title ul li:nth-child(2).on a {
+.list_title ul li:nth-child(2).on p {
     background-color: #FF4C4C;
     color: #333;
 }
 
-.list_title ul li:nth-child(3) a:hover {
+.list_title ul li:nth-child(3) p:hover {
     background-color: #1DDDFF;
     color: #333;
 }
 
-.list_title ul li:nth-child(3).on a {
+.list_title ul li:nth-child(3).on p {
     background-color: #1DDDFF;
     color: #333;
 }
 
+
+.exh .imgBox {}
 
 .exh_1 {
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 .exh_1 li {
-
     display: none;
+
 }
 
 .exh_1 li.on {
     display: block;
 }
-
-.exh_1 li img {
-
-}
-
-
-
 
 
 .list_txt {
@@ -937,7 +1213,6 @@ i {
 .list_txt li {
     display: flex;
     justify-content: space-between;
-    width: 90%;
     display: none;
 }
 
@@ -949,9 +1224,10 @@ i {
 
 .exh .more {
     background-color: #fee440;
-    padding: 20px;
-    width: 100%;
+    padding: 20px 0;
+    width: 1364px;
     height: 35px;
+    margin: 0 auto;
 }
 
 .exh .more span {
@@ -962,28 +1238,32 @@ i {
 }
 
 
-.exh .more a {
+.list_txt span:nth-child(2) {
     font-size: 15px;
     border: solid 1px #333;
     padding: 5px 30px;
     border-radius: 40px;
-
+    font-family: "Noto Sans KR", sans-serif;
+    font-weight: normal;
 }
 
-.exh .more a:hover {
+.list_txt span:nth-child(2):hover {
     background-color: #333;
-    color: #fee440;
+    color: #eee;
 }
 
+.exh .imgBox {
+    width: 1364px;
+    margin: 0 auto;
+}
 
 
 /* 관람후기 */
-
 .review {
     width: 100%;
-    height: 500px;
-    /* overflow: hidden; */
-    /* position: relative; */
+    height: 600px;
+    overflow: hidden;
+    position: relative;
 }
 
 .review h2 {
@@ -991,6 +1271,53 @@ i {
     margin: 0 auto;
     margin-top: 60px;
     margin-bottom: 20px;
+}
+
+.review_silder {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 345px;
+    margin: 0 auto;
+}
+
+.review_silder ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.review_silder1 {
+    display: flex;
+}
+
+.review_silder2 {
+    display: flex;
+}
+
+.review_silder ul li {
+    background-color: #26265B;
+    margin-right: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    width: 250px;
+    height: 340px;
+    box-sizing: border-box;
+}
+
+.review_silder .imgBox {
+    width: 250px;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+.review_silder p {
+    padding: 10px;
+    margin: 0 10px;
 }
 
 .review_silder ul li p:nth-last-child(1) {
@@ -1001,90 +1328,10 @@ i {
     height: 50px;
 }
 
-.review_silder .imgBox {
-    width: 250px;
-    height: 220px;
-    overflow: hidden;
-    border-radius: 10px 10px 0 0;
-}
-
-
-.review_silder {
-    /* position: relative; */
-    overflow: hidden;
-    width: 200%;
-    height: 345px;
-    margin: 0 auto;
-    display: flex;
-}
-
-.review_silder ul {
-    display: flex;
-    width: 100%;
-    padding: 0;
-    margin: 0;
-    /* position: absolute; */
-}
-
-
-.review_silder1 {
-    left: 0;
-    top: 0;
-    animation: ani1 20s linear infinite;
-}
-
-.review_silder2 {
-    left: 100%;
-    animation: ani2 20s linear infinite;
-
-}
-
-
-.review_silder ul li {
-    background-color: #26265B;
-    margin-right: 15px;
-    border-radius: 10px;
-    font-size: 16px;
-    /* box-sizing: border-box; */
-    /* overflow: hidden; */
-    /* position: relative; */
-    width: 250px;
-    height: 340px;
-}
-
-
-.review_silder p {
-    padding: 10px;
-    margin: 0 10px;
-}
-
 .review_soild {
     border-bottom: solid 1px #ccc;
     margin: 0 18px;
 }
-
-.review ul:hover li {
-    animation-play-state: paused;
-}
-
-/* @keyframes ani1 {
-    0% {
-        left: 0%;
-    }
-
-    100% {
-        left: -100%;
-    }
-}
-
-@keyframes ani2 {
-    0% {
-        left: 100%;
-    }
-
-    100% {
-        left: 0%;
-    } */
 
 .review_bar {
     max-width: 1200px;
@@ -1098,6 +1345,7 @@ i {
     border-radius: 50px;
     background-color: #54546E;
     margin: 0 auto;
+    position: relative;
 }
 
 .review_bar2 {
@@ -1105,11 +1353,24 @@ i {
     height: 10px;
     border-radius: 50px;
     background-color: #fee440;
+    cursor: grab;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.review_bar2:active {
+    cursor: grabbing;
 }
 
 
 
+
 /* FAQ */
+.FAQ {
+    height: 300px;
+}
+
 .FAQ h2 {
     margin-top: 60px;
     margin-bottom: 20px;
@@ -1122,19 +1383,13 @@ i {
     border-radius: 10px;
 }
 
-.FAQ ul {}
-
 .FAQ ul li {
+    cursor: default;
     padding: 18px 0;
     border-bottom: solid 1px #ccc;
     font-size: 18px;
     margin: 0 18px;
     display: flex;
-}
-
-
-.FAQ ul li:nth-last-child(1) {
-    border-bottom: none;
 }
 
 .FAQ ul b {
@@ -1143,11 +1398,35 @@ i {
     margin-right: 20px;
 }
 
-.FAQ ul li a {
+.FAQ ul li i {
     font-size: 20px;
     margin-left: auto;
     margin-right: 10px;
 }
+
+/* 마지막 Q/A는 border-bottom 제거 */
+.FAQ ul li.last {
+    border-bottom: none;
+}
+
+/* A 기본 숨김 상태: border-top 없음 */
+.FAQ .A {
+    overflow: hidden;
+    padding: 0;
+    height: 0;
+    border-top: 0;
+    /* 접혀 있을 때는 없음 */
+    transition: all 0.5s;
+}
+
+/* Q hover 시 바로 다음 A 펼쳐짐 + border-top 추가 */
+.FAQ ul li.Q:hover+li.A {
+    height: auto;
+    padding: 18px 0;
+    border-top: 1px solid #ccc;
+    /* 펼쳐졌을 때만 */
+}
+
 
 /* 푸터 */
 
@@ -1206,7 +1485,7 @@ i {
 /* TOP버튼 */
 
 .topBtn {
-    z-index: 9;
+    z-index: 7;
     background-color: #FF4C4C;
     width: 75px;
     height: 75px;
@@ -1228,7 +1507,6 @@ i {
     font-size: 20px;
     margin-top: 16px;
 }
-
 
 
 /* 전체사이즈설정 */

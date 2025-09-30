@@ -12,6 +12,8 @@
     <!-- 제이쿼리 연결 -->
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
     <script src="javascript/js.js"></script>
     <!-- 외부스타일시트 -->
     <link rel="stylesheet" href="css/style_1.css">
@@ -112,20 +114,19 @@
                     <ul>
                         <li>
                             <div class="more_w1">
-                                <a href="">
-                                    <img src="img/ico/more_w.png" alt="" width="40px" height="auto">
-                                    <p>버튼</p>
-                                </a>
+
+                                <img src="img/ico/more_w.png" alt="" width="40px" height="auto">
+                                <p>버튼</p>
+
                             </div>
                             <p>개관 10주년을 함께<br>축하해주세요!</p>
 
 
                         </li>
                         <li>
-                            <div class="more_w2"><a href="https://smartstore.naver.com/figuremuseumw"> <img src="img/ico/more_w.png" alt="" width="40px"
-                                        height="auto">
-                                    <p>버튼</p>
-                                </a></div>
+                            <div class="more_w2"> <img src="img/ico/more_w.png" alt="" width="40px" height="auto">
+                                <p>버튼</p>
+                            </div>
                             <p>피규어뮤지엄W<br>온라인스토어OPEN</p>
 
                         </li>
@@ -204,9 +205,10 @@
                             <p>오른쪽</p>
                         </a></div>
                     <div class="slider_btnS">
-                        <a href="" class="on"> <img src="img/ico/slider_stop_2.png" alt="" width="30px" height="auto"></a>
-                        <a href="" ><img src="img/ico/slider_stop_1.png" alt="" width="30px" height="auto"></a>
-                        
+                        <a href="" class="on"> <img src="img/ico/slider_stop_2.png" alt="" width="30px"
+                                height="auto"></a>
+                        <a href=""><img src="img/ico/slider_stop_1.png" alt="" width="30px" height="auto"></a>
+
                     </div>
                 </div>
 
@@ -225,7 +227,7 @@
                         <li><a href="">코로나바이러스 예방를 위한 운영규칙</a></li>
                         <li><a href="">2025 박물관·미술관 주간 혜택 보기</a></li>
                     </ul>
-                    <a href=""><i class="fa-solid fa-angle-right"></i></a>
+                    <i class="fa-solid fa-angle-right"></i>
                 </div>
             </div>
         </section>
@@ -243,47 +245,100 @@
                             <ul>
                                 <li>
                                     <div class="res1-2">
-                                        <b>00/00</b>
-                                        <b>0회차</b>
+                                        <b class="res-date">00/00</b>
+                                        <b>1회차</b>
                                     </div>
-                                    <p><i class="fa-regular fa-clock"></i> 00:00~00:00</p>
+                                    <p><i class="fa-regular fa-clock"></i> 09:00~10:00</p>
                                     <div class="res1-3">
-                                        <b>00명</b>
-                                        <p class="res_btn_big"><a href="">예매하기<i
-                                                    class="fa-solid fa-pen-to-square"></i></a></p>
+                                        <b>10명</b>
+                                        <p class="res_btn_big">예매하기<i class="fa-solid fa-pen-to-square"></i></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="res1-2">
+                                        <b class="res-date">00/00</b>
+                                        <b>2회차</b>
+                                    </div>
+                                    <p><i class="fa-regular fa-clock"></i> 10:30~12:30</p>
+                                    <div class="res1-3">
+                                        <b>15명</b>
+                                        <p class="res_btn_big">예매하기<i class="fa-solid fa-pen-to-square"></i></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="res1-2">
+                                        <b class="res-date">00/00</b>
+                                        <b>3회차</b>
+                                    </div>
+                                    <p><i class="fa-regular fa-clock"></i> 13:00~15:00</p>
+                                    <div class="res1-3">
+                                        <b>20명</b>
+                                        <p class="res_btn_big">예매하기<i class="fa-solid fa-pen-to-square"></i></p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="res1-2">
+                                        <b class="res-date">00/00</b>
+                                        <b>4회차</b>
+                                    </div>
+                                    <p><i class="fa-regular fa-clock"></i> 15:30~18:00</p>
+                                    <div class="res1-3">
+                                        <b>02명</b>
+                                        <p class="res_btn_big">예매하기<i class="fa-solid fa-pen-to-square"></i></p>
                                     </div>
                                 </li>
                             </ul>
-
-                            <div class="res_slider">
-                                <ul>
-                                    <a href=""><i class="fa-solid fa-caret-left"></i></a>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <a href="">
-                                        <i class="fa-solid fa-caret-right"></i>
-
-                                    </a>
-                                </ul>
-                            </div>
                         </div>
 
 
                     </div>
                 </div>
                 <div class="box3-2">
+
+                    <div class="re-popUp1">
+                        <p>예매 하시겠습니까?</p>
+
+                        <div class="info-table">
+                           
+                            <div class="info-row">
+                                <div class="info-label">프로그램</div>
+                                <div class="info-value name">프로그램명프로그램명프로그램명</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">예매일</div>
+                                <div class="info-value re-date">날짜</div>
+                            </div>
+                            <div class="info-row">
+                                <div class="info-label">인원</div>
+                                <input type="number" id="mumber-to-show" value="1" min="1" max="30">
+                            </div>
+
+                        </div>
+
+
+
+                        <i class="fa-regular fa-circle-xmark"></i>
+                        <div class="re-popBtn">
+                            <span>네</span>
+                            <span>아니요</span>
+                        </div>
+                    </div>
+                    <div class="re-popUp2">
+                        <p>완료되었습니다 <i class="fa-solid fa-square-check"></i></p>
+                        <span>닫기</span>
+                    </div>
+                    <div class="re-popUp-bg"></div>
+
                     <div class="reservation2">
                         <div class="calender">
 
                             <form action="">
                                 <div class="date">
                                     <p>2025-00-00<i class="fa-solid fa-calendar"></i></p>
+                                    <div id="calendar"></div>
                                 </div>
 
-                                <select name="" id="">
+                                <select name="" id="select">
                                     <option value="">[서울]주중 피규어 뮤지엄W</option>
                                     <option value="">[서울]주중 피규어 뮤지엄W 관람+체험 패키지</option>
                                     <option value="">[서울]주말 피규어 뮤지엄W</option>
@@ -294,40 +349,40 @@
                             <ul>
                                 <li>
                                     <p>1회차</p>
-                                    <p><i class="fa-regular fa-clock"></i>00:00 - 00:00</p>
+                                    <p><i class="fa-regular fa-clock"></i>09:00 - 10:00</p>
                                     <div class="res-group">
-                                        <p>00명</p>
-                                        <p class="res_btn"><a href="">예매하기<i class="fa-solid fa-pen-to-square"></i></a>
+                                        <p>10명</p>
+                                        <p class="res_btn"><span>예매하기<i class="fa-solid fa-pen-to-square"></i></span>
                                         </p>
                                     </div>
                                 </li>
 
                                 <li>
-                                    <p>1회차</p>
-                                    <p><i class="fa-regular fa-clock"></i>00:00 - 00:00</p>
+                                    <p>2회차</p>
+                                    <p><i class="fa-regular fa-clock"></i>10:30 - 12:30</p>
                                     <div class="res-group">
-                                        <p>00명</p>
-                                        <p class="res_btn"><a href="">예매하기<i class="fa-solid fa-pen-to-square"></i></a>
+                                        <p>15명</p>
+                                        <p class="res_btn"><span>예매하기<i class="fa-solid fa-pen-to-square"></i></span>
                                         </p>
                                     </div>
                                 </li>
 
                                 <li>
-                                    <p>1회차</p>
-                                    <p><i class="fa-regular fa-clock"></i>00:00 - 00:00</p>
+                                    <p>3회차</p>
+                                    <p><i class="fa-regular fa-clock"></i>13:00 - 15:00</p>
                                     <div class="res-group">
-                                        <p>00명</p>
-                                        <p class="res_btn"><a href="">예매하기<i class="fa-solid fa-pen-to-square"></i></a>
+                                        <p>20명</p>
+                                        <p class="res_btn"><span>예매하기<i class="fa-solid fa-pen-to-square"></i></span>
                                         </p>
                                     </div>
                                 </li>
 
                                 <li>
-                                    <p>1회차</p>
-                                    <p><i class="fa-regular fa-clock"></i>00:00 - 00:00</p>
+                                    <p>4회차</p>
+                                    <p><i class="fa-regular fa-clock"></i>15:30 - 18:30</p>
                                     <div class="res-group">
-                                        <p>00명</p>
-                                        <p class="res_btn"><a href="">예매하기<i class="fa-solid fa-pen-to-square"></i></a>
+                                        <p>02명</p>
+                                        <p class="res_btn"><span>예매하기<i class="fa-solid fa-pen-to-square"></i></span>
                                         </p>
                                     </div>
                                 </li>
@@ -345,10 +400,9 @@
 
 
         <section class="box4">
-
             <div class="info">
 
-                <h2>관람안내 <a href=""><img src="img/ico/more_r.png" alt=""></a></h2>
+                <h2>관람안내 <img src="img/ico/more_r.png" alt=""></h2>
                 <ul>
                     <li>
                         <div class="info_h">
@@ -386,7 +440,6 @@
                     </li>
                 </ul>
             </div>
-
         </section>
 
         <section class="box7">
@@ -403,7 +456,7 @@
                         <p><i class="fa-solid fa-location-dot"></i>서울특별시 강남구 선릉로158길 3</p>
                         <p><i class="fa-solid fa-phone"></i>02-512-8865</p>
                     </div>
-                    <div class="car"><a href=""><i class="fa-solid fa-car-side"></i>주차안내</a></div>
+                    <div class="car"><span><i class="fa-solid fa-car-side"></i>주차안내</span></div>
                 </div>
 
             </div>
@@ -443,9 +496,15 @@
 
                         <div class="list_title">
                             <ul>
-                                <li class="on"><a href="">상설전시</a></li>
-                                <li><a href="">현재전시</a></li>
-                                <li><a href="">지난전시</a></li>
+                                <li class="on">
+                                    <p>상설전시</p>
+                                </li>
+                                <li>
+                                    <p>현재전시</p>
+                                </li>
+                                <li>
+                                    <p>지난전시</p>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -459,20 +518,26 @@
                         <li><img src="img/exh_3-1.jpg" alt=""></li>
                     </ul>
 
-
-                    <div class="more">
-                        <ul class="list_txt">
-                            <li class="on">
-                                <span>SUPER HERO & Ani HERO</span>
-                                <a href="">더보기</a>
-                            </li>
-                            <li>
-                                <span>SUPER HERO & Ani HERO</span>
-                                <a href="">더보기</a>
-                            </li>
-                        </ul>
-                    </div>
                 </div>
+
+
+                <div class="more">
+                    <ul class="list_txt">
+                        <li class="on">
+                            <span>SUPER HERO & Ani HERO</span>
+                            <span>더보기</span>
+                        </li>
+                        <li>
+                            <span>DC FanDome Press Release</span>
+                            <span>더보기</span>
+                        </li>
+                        <li>
+                            <span>Robot Taekwon V</span>
+                            <span>더보기</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
 
         </section>
 
@@ -480,7 +545,7 @@
         <section class="box8">
 
             <div class="review">
-                <h2>관람후기<a href=""><img src="img/ico/more_r.png" alt=""></a></h2>
+                <h2>관람후기<img src="img/ico/more_r.png" alt=""></h2>
                 <div class="review_silder">
                     <ul class="review_silder1">
                         <li>
@@ -660,18 +725,35 @@
 
         <section class="box9">
             <div class="FAQ">
-                <h2>FAQ<a href=""><img src="img/ico/more_r.png" alt=""></a></h2>
+                <h2>FAQ<img src="img/ico/more_r.png" alt=""></h2>
 
                 <ul>
-                    <li><b>Q</b>피규어 뮤지엄은 어디에 위치하고 있나요?<a href=""><i class="fa-solid fa-chevron-down"></a></i></li>
-                    <!-- <li><b>A</b>답변<i class="fa-solid fa-angle-up"></i></i></li> -->
-                    <li><b>Q</b>관람료와 관람시간 및 휴관일은 어떻게 되나요?<a href=""><i class="fa-solid fa-chevron-down"></a></i></li>
-                    <li><b>Q</b>전시실의 사진 촬영이 가능한가요?<a href=""><i class="fa-solid fa-chevron-down"></a></i></li>
-                    <li><b>Q</b>주차가 가능한가요?<a href=""><i class="fa-solid fa-chevron-down"></a></i></li>
-                </ul>
+                    <li class="Q"><b>Q</b>피규어 뮤지엄은 어디에 위치하고 있나요?<i class="fa-solid fa-chevron-down"></i>
+                    </li>
+                    <li class="A"><b>A</b>구주소 : 서울시 강남구 청담동 84-9 신주소 : 서울시 강남구 선릉로158길 3<br>압구정로데오역(분당선) 4번 출구에서 100m 직진
+                        후 첫번째 골목에서 좌회전 하시면 피규어뮤지엄W가 있습니다.
+                        <i class="fa-solid fa-angle-up"></i>
+                    </li>
 
+                    <li class="Q"><b>Q</b>관람료와 관람시간 및 휴관일은 어떻게 되나요?<i class="fa-solid fa-chevron-down"></i></li>
+                    <li class="A"><b>A</b>관람안내(바로가기)페이지에 기제되어 있습니다.
+                        <i class="fa-solid fa-angle-up"></i>
+                    </li>
+
+                    <li class="Q"><b>Q</b>전시실의 사진 촬영이 가능한가요?<i class="fa-solid fa-chevron-down"></i></li>
+                    <li class="A"><b>A</b>인증샷 촬영은 가능합니다.<br>
+                        단, 피규어 보호를 위해 플래시/삼각대 등을 이용한 촬영과 상업적 용도를 위한 촬영은 금지되어 있습니다.
+                        <i class="fa-solid fa-angle-up"></i>
+                    </li>
+
+                    <li class="Q last"><b>Q</b>주차가 가능한가요?<i class="fa-solid fa-chevron-down"></i></li>
+                    <li class="A last"><b>A</b>저희 뮤지엄 내에는 주차장이 없습니다. 인근 시설을 이용 바랍니다.
+                        <i class="fa-solid fa-angle-up"></i>
+                    </li>
+                </ul>
+            </div>
         </section>
-    </div>
+
     </div>
 
 
