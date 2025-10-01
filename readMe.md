@@ -1,6 +1,6 @@
 
 
-# 👋 About Me
+# ✨ About Me
 안녕하세요, 웹디자인과 퍼블리싱을 공부하고 있는 **이새은**입니다.
 사용자가 직관적으로 이해하고 편리하게 이용할 수 있는 웹사이트 제작에 관심이 많습니다.
 또한 기획 단계부터 디자인, 퍼블리싱까지 전 과정을 직접 경험하며 꾸준히 역량을 쌓아가고 있습니다.
@@ -18,16 +18,16 @@
 
 ---
 
-# 💼 Projects
+# 📂 Projects
 
 ## 1️⃣ Project 01 - website renewel:피규어뮤지엄W
 > 웹사이트 피규어뮤지엄W의 리뉴얼
 
 **📆 제작 기간** : 2025.05.26. ~ 2025.06.26.                      
 **🕒작업 시간** : 60h                     
-**🧑 역할** : 디자인 100%, 퍼블리싱 100%, 기획 참여                    
+**⭐역할** : 디자인 100%, 퍼블리싱 100%, 기획 참여                    
 
-### ⭐ 프로젝트 설명
+### 💬 프로젝트 설명
 기존 사이트의 불편한 점을 개선하고, 한층 더 매력적인 디자인으로 사용자의 관심을 끌도록 리뉴얼 하였습니다.
 
 - 메인컬러 : 인디고블루, 레몬옐로우 / 포인트컬러 : 리빙코랄  
@@ -39,7 +39,7 @@
 - [코드 저장소](https://github.com/todms0925/portfolio2025/blob/main/project001/index.html)
 - [최종 사이트](https://todms0925.github.io/portfolio2025/project001/)
 
-### 👀 페이지 미리보기
+### 🔍 페이지 미리보기
 | 메인 페이지 |
 |------------|
 | <img width="3000" height="3000" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/2ce4935c-c2b2-4834-aa95-2b6563b0b44b" /> |
@@ -51,9 +51,9 @@
 
 **📆 제작 기간** : 2025.08.05. ~ 2025.09.05.                    
 **🕒작업 시간** : 60h               
-**🧑 역할** : 퍼블리싱 100%, 기획 100%                    
+**⭐역할** : 퍼블리싱 100%, 기획 100%                    
 
-### ⭐ 프로젝트 설명
+### 💬 프로젝트 설명
 모바일 환경만 존재하던 웹의 데스크탑 웹페이지를 신규 제작하였습니다.
 
 - **Swiper** 슬라이드, **탭메뉴**, **모달창**, **사이드바** 구현
@@ -63,20 +63,20 @@
 - [코드 저장소](https://github.com/todms0925/portfolio2025/blob/main/project002/index.html)
 - [최종 사이트](https://todms0925.github.io/portfolio2025/project002/)
 
-### 👀 페이지 미리보기
+### 🔍 페이지 미리보기
 | 메인 페이지 | 로그인 페이지 |
 |------------|----------------|
 | <img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/966dd0e5-3f07-4d01-9312-71d8afaa5a8a" /> | <img width="3000" height="3000" alt="Image" src="https://github.com/user-attachments/assets/674efaa5-2dc3-45a9-8a3a-4b3c35da4729" /> |
 
 ---
-## 2️⃣ Project 03 - Panpage Project:여자친구(GFRIEND)
+## 3️⃣ Project 03 - Panpage Project:여자친구(GFRIEND)
 > 걸그룹 여자친구(GFRIEND)의 팬페이지 제작
 
 **📆 제작 기간** : 2025.09.18. ~ 2025.09.26.             
 **🕒작업 시간** : 28h       
-**🧑 역할** : 퍼블리싱 100%, 기획 100%    
+**⭐역할** : 퍼블리싱 100%, 기획 100%    
 
-### ⭐ 프로젝트 설명
+### 💬 프로젝트 설명
 겨울의 신비로움을 담아냄과 동시에 청순하며 아련한 이미지를 나타낼 수 있는 방향으로 내세우고 있습니다.
 ‘조화로움’은 가장 중요한 키워드로, 특별히 한 가지 색이 눈에 띄는 것이 아닌 모든 무드 컬러가 최대한 어우러지도록 디자인 했습니다. 
 
@@ -88,7 +88,7 @@
 - [코드 저장소](https://github.com/todms0925/portfolio2025/blob/main/project003/index.html)
 - [최종 사이트](https://todms0925.github.io/portfolio2025/project003/)
 
-### 👀 페이지 미리보기
+### 🔍 페이지 미리보기
 | Home 페이지 | 모든 페이지 |
 |------------|----------------|
 | <img width="3000" height="3000" alt="944893_OD15EW1" src="https://github.com/user-attachments/assets/4472e59a-b541-4d54-9551-f4708e0e95ed" /> | <img width="3500" height="2333" alt="23126508_195" src="https://github.com/user-attachments/assets/a456eb02-5069-4804-9694-d1033beb90a6" /> |
